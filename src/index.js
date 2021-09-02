@@ -1,9 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+
+// COMPONENTS
 import App from './App'
 
+// MATERIAL UI
+import { ThemeProvider } from '@material-ui/core/styles'
+
+// STYLES
+import './index.css'
+
+// UTILS
+import fontConfig from './utils/fontConfig'
+
 ReactDOM.render(
-  <App />,
+  <ThemeProvider theme={fontConfig}>
+    <App />
+  </ThemeProvider>,
   document.getElementById('root')
 )
