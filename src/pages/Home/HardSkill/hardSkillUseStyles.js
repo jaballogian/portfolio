@@ -25,6 +25,12 @@ const useStyles = makeStyles((theme) => ({
     margin: '0px auto',
     borderRadius: 20,
     boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.25)',
+    transform: 'scale(1)',
+    transition: 'transform 0.25s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.025)',
+      transition: 'transform 0.25s ease-in-out',
+    },
   },
   itemTitleContainer: {
     width: '100%',
