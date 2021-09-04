@@ -14,7 +14,7 @@ const hardSkillList = [
     contents: [
       'HTML',
       'CSS',
-      'Javascript',
+      'Javascript (ES6)',
       'Java',
       'Python',
       'C++',
