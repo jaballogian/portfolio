@@ -15,12 +15,15 @@ const HardSkill = () => {
 
   return (
     <div className={classes['root']}>
-      <Grid container>
+      <Grid 
+        container 
+        justifyContent='center'
+      >
         {hardSkillList.map((item, index) => (
           <Grid
             key={index}
             item
-            xs={4}
+            xs={12} lg={4}
           >
             {/* GRID ITEM CONTAINER */}
             <div className={classes['itemContainer']}>
