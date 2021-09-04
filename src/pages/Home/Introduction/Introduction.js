@@ -9,8 +9,6 @@ import useStyles from './introductionUseStyles'
 const Introduction = () => {
   const classes = useStyles()
 
-  const caption = 'A frontend developer, mobile application developer,\nand IoT engineer.'
-
   return (
     <div className={classes['root']}>
       {/* TITLE */}
@@ -22,14 +20,9 @@ const Introduction = () => {
       </Typography>
 
       {/* CAPTION */}
-      {caption.split('\n').map((item, index) => (
-        <Typography 
-          key={index}
-          variant='h3'
-        >
-          {item}
-        </Typography>
-      ))}
+      <Typography variant='h3'>
+        A frontend developer, mobile application developer, and IoT engineer.
+      </Typography>
     </div>
   )
 }
