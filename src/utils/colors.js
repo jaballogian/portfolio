@@ -4,7 +4,8 @@ const colors = {
   carribeanGreen: '#06D6A0', // GREEN
   cultured: '#E9ECEF', // LIGHT GRAY
   orangeYellowCrayota: '#FFD166', // YELLOW
-  paradisePink: '#EF476F', // RED
+  paradisePink: '#EF476F', // PINK RED
+  redCrayola: '#ED1D4D', // RED
   slateGray: '#6C757D', // DARK GRAY
   stackoverflowGold: '#FFCC01', // GOLD
   stackoverflowSilver: '#B4B8BC', // SILVER
