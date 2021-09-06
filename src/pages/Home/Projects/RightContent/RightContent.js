@@ -15,6 +15,8 @@ const RightContent = () => {
       xs={6}
     >
       <div className={classes['root']}>
+        <div className={classes['placeholder']}/>
+        <div className={classes['placeholder']}/>
       </div>
     </Grid>
   )
