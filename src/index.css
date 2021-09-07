@@ -2,7 +2,7 @@
   font-family: 'Cera Pro Medium';
   font-style: normal;
   font-weight: 500;
-  src: url('./assets/fonts/Cera_Pro_Medium.ttf') format('ttf');
+  src: url('./assets/fonts/Cera_Pro_Medium.ttf') format('truetype');
 }
 
 body {
