@@ -2,7 +2,7 @@
 import { makeStyles } from '@material-ui/core/styles'
 
 // UTILS
-import colors from '../../../../utils/colors'
+import colors from '../../utils/colors'
 
 const useStyles = makeStyles((theme) => ({
   root: {

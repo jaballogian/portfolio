@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
 // IMAGES (SORTED BY ORDER)
-import IconFirst from '../../../../assets/images/icons/page_navigation_first.svg'
-import IconFirstHovered from '../../../../assets/images/icons/page_navigation_first_hovered.svg'
-import IconPrevious from '../../../../assets/images/icons/page_navigation_previous.svg'
-import IconPreviousHovered from '../../../../assets/images/icons/page_navigation_previous_hovered.svg'
-import IconNext from '../../../../assets/images/icons/page_navigation_next.svg'
-import IconNextHovered from '../../../../assets/images/icons/page_navigation_next_hovered.svg'
-import IconLast from '../../../../assets/images/icons/page_navigation_last.svg'
-import IconLastHovered from '../../../../assets/images/icons/page_navigation_last_hovered.svg'
+import IconFirst from '../../assets/images/icons/page_navigation_first.svg'
+import IconFirstHovered from '../../assets/images/icons/page_navigation_first_hovered.svg'
+import IconPrevious from '../../assets/images/icons/page_navigation_previous.svg'
+import IconPreviousHovered from '../../assets/images/icons/page_navigation_previous_hovered.svg'
+import IconNext from '../../assets/images/icons/page_navigation_next.svg'
+import IconNextHovered from '../../assets/images/icons/page_navigation_next_hovered.svg'
+import IconLast from '../../assets/images/icons/page_navigation_last.svg'
+import IconLastHovered from '../../assets/images/icons/page_navigation_last_hovered.svg'
 
 // MATERIAL UI CORES
 import Typography from '@material-ui/core/Typography'
