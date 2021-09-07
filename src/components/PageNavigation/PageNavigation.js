@@ -19,9 +19,11 @@ import useStyles from './pageNavigationUseStyles'
 const PageNavigation = () => {
   const classes = useStyles()
 
-  const [ hovered, setHovered ] = useState(null)
+  const [ isLeftListHovered, setILeftListHovered ] = useState(null)
+  const [ isTextListHovered, setIsTextListHovered ] = useState(null)
+  const [ isRightListHovered, setIsRightListHovered ] = useState(null)
 
-  const list = [
+  const leftIconList = [
     { 
       icon: IconFirst,
       hovered: IconFirstHovered,
@@ -30,9 +32,11 @@ const PageNavigation = () => {
       icon: IconPrevious,
       hovered: IconPreviousHovered,
     },
-    { text: '1' },
-    { text: '2' },
-    { text: '3' },
+  ]
+  
+  const textList = [ 0, 1, 2 ]
+  
+  const rightIconList = [
     { 
       icon: IconNext,
       hovered: IconNextHovered,
@@ -45,41 +49,74 @@ const PageNavigation = () => {
 
   return (
     <div className={classes['root']}>
-      {list.map((item, index) => (
-        // ITEM CONTAINER
+      {/* LEFT ICON LIST */}
+      {leftIconList.map((item, index) => (
         <div
           key={index}
           className={
-            hovered === index ?
+            isLeftListHovered === index ?
             `${classes['container']} ${classes['containerHovered']}` :
             classes['container']
           }
-          onMouseEnter={() => setHovered(index)}
-          onMouseLeave={() => setHovered(null)}
+          onMouseEnter={() => setILeftListHovered(index)}
+          onMouseLeave={() => setILeftListHovered(null)}
         >
-          {/* ICON */}
-          {item['icon'] &&
           <img 
             src={
-              hovered === index ?
+              isLeftListHovered === index ?
               item['hovered'] :
               item['icon']
             } 
             alt=''
-          />}
+          />
+        </div>
+      ))}
 
-          {/* TEXT */}
-          {item['text'] &&
+      {/* TEXT LIST */}
+      {textList.map((item, index) => (
+        <div
+          key={index}
+          className={
+            isTextListHovered === index ?
+            `${classes['container']} ${classes['containerHovered']}` :
+            classes['container']
+          }
+          onMouseEnter={() => setIsTextListHovered(index)}
+          onMouseLeave={() => setIsTextListHovered(null)}
+        >
           <Typography 
             variant='h5'
             className={
-              hovered === index ?
+              isTextListHovered === index ?
               `${classes['text']} ${classes['textHovered']}` :
               classes['text']
             }
           >
-            {item['text']}
-          </Typography>}
+            {item + 1}
+          </Typography>
+        </div>
+      ))}
+
+      {/* RIGHT ICON LIST */}
+      {rightIconList.map((item, index) => (
+        <div
+          key={index}
+          className={
+            isRightListHovered === index ?
+            `${classes['container']} ${classes['containerHovered']}` :
+            classes['container']
+          }
+          onMouseEnter={() => setIsRightListHovered(index)}
+          onMouseLeave={() => setIsRightListHovered(null)}
+        >
+          <img 
+            src={
+              isRightListHovered === index ?
+              item['hovered'] :
+              item['icon']
+            } 
+            alt=''
+          />
         </div>
       ))}
     </div>
