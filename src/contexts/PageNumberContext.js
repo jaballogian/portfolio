@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react'
 const PageNumberContext = createContext()
 
 const PageNumberContextProvider = (props) => {
-  const [ currentPage, setCurrentPage ] = useState(1)
+  const [ currentPage, setCurrentPage ] = useState(0)
 
   const changeCurrentPage = (inputNumber) => {
     setCurrentPage(inputNumber)
