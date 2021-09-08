@@ -111,9 +111,13 @@ const PageNavigation = () => {
         <div
           key={index}
           className={
-            isTextListHovered === index ?
-            `${classes['container']} ${classes['containerHovered']}` :
-            classes['container']
+            currentPage === index ?
+            `${classes['container']} ${classes['containerCurrentPage']}` :
+            (
+              isTextListHovered === index ?
+              `${classes['container']} ${classes['containerHovered']}` :
+              classes['container']
+            )
           }
           onMouseEnter={() => setIsTextListHovered(index)}
           onMouseLeave={() => setIsTextListHovered(null)}
@@ -121,9 +125,13 @@ const PageNavigation = () => {
           <Typography 
             variant='h5'
             className={
-              isTextListHovered === index ?
-              `${classes['text']} ${classes['textHovered']}` :
-              classes['text']
+              currentPage === index ?
+              classes['textCurrentPage'] :
+              (
+                isTextListHovered === index ?
+                `${classes['text']} ${classes['textHovered']}` :
+                classes['text']
+              )
             }
           >
             {item + 1}

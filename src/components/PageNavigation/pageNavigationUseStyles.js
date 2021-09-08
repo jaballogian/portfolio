@@ -30,6 +30,12 @@ const useStyles = makeStyles((theme) => ({
   textHovered: {
     color: colors['cultured'],
   },
+  containerCurrentPage: {
+    backgroundColor: colors['orangeYellowCrayota'],
+  },
+  textCurrentPage: {
+    color: 'black',
+  },
 }))
 
 export default useStyles
