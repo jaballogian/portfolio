@@ -78,6 +78,10 @@ const PageNavigation = () => {
     }
   }
 
+  const goToAnotherPage = (inputIndex) => {
+    changeCurrentPage(inputIndex)
+  }
+
   console.log(currentPage)
 
   return (
@@ -121,6 +125,7 @@ const PageNavigation = () => {
           }
           onMouseEnter={() => setIsTextListHovered(index)}
           onMouseLeave={() => setIsTextListHovered(null)}
+          onClick={() => goToAnotherPage(index)}
         >
           <Typography 
             variant='h5'
