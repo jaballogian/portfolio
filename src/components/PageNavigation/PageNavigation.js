@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+
+// CONTEXTS
+import { PageNumberContext } from '../../contexts/PageNumberContext'
 
 // IMAGES (SORTED BY ORDER)
 import IconFirst from '../../assets/images/icons/page_navigation_first.svg'
@@ -18,6 +21,8 @@ import useStyles from './pageNavigationUseStyles'
 
 const PageNavigation = () => {
   const classes = useStyles()
+
+  const { currentPage, changeCurrentPage } = useContext(PageNumberContext)
 
   const [ isLeftListHovered, setILeftListHovered ] = useState(null)
   const [ isTextListHovered, setIsTextListHovered ] = useState(null)
@@ -47,6 +52,21 @@ const PageNavigation = () => {
     },
   ]
 
+  const goBackPage = (inputIndex) => {
+    // FIRST PAGE
+    if(inputIndex === 0) {
+      changeCurrentPage(0)
+    }
+    // PREVIOUS PAGE
+    else if(inputIndex === 1) {
+      if(currentPage > 0) {
+        changeCurrentPage(current => current - 1)
+      }
+    }
+  }
+
+  console.log(currentPage)
+
   return (
     <div className={classes['root']}>
       {/* LEFT ICON LIST */}
@@ -60,6 +80,7 @@ const PageNavigation = () => {
           }
           onMouseEnter={() => setILeftListHovered(index)}
           onMouseLeave={() => setILeftListHovered(null)}
+          onClick={() => goBackPage(index)}
         >
           <img 
             src={
