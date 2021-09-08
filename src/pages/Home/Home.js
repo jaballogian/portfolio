@@ -5,9 +5,6 @@ import Introduction from './Introduction/Introduction'
 import HardSkill from './HardSkill/HardSkill'
 import Projects from './Projects/Projects'
 
-// CONTEXTS
-import { PageNumberContextProvider } from '../../contexts/PageNumberContext'
-
 // STYLES
 import useStyles from './homeUseStyles'
 
@@ -18,9 +15,7 @@ const Home = () => {
     <div className={classes['root']}>
       <Introduction/>
       <HardSkill/>
-      <PageNumberContextProvider>
-        <Projects/>
-      </PageNumberContextProvider>
+      <Projects/>
     </div>
   )
 }
