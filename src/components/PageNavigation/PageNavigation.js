@@ -65,6 +65,19 @@ const PageNavigation = () => {
     }
   }
 
+  const goForwardPage = (inputIndex) => {
+    // NEXT PAGE
+    if(inputIndex === 0) {
+      if(currentPage < textList.length - 1) {
+        changeCurrentPage(current => current + 1)
+      }
+    }
+    // PREVIOUS PAGE
+    else if(inputIndex === 1) {
+      changeCurrentPage(textList.length - 1)
+    }
+  }
+
   console.log(currentPage)
 
   return (
@@ -129,6 +142,7 @@ const PageNavigation = () => {
           }
           onMouseEnter={() => setIsRightListHovered(index)}
           onMouseLeave={() => setIsRightListHovered(null)}
+          onClick={() => goForwardPage(index)}
         >
           <img 
             src={
