@@ -3,6 +3,7 @@ import React from 'react'
 // COMPONENTS (SORTED BY ORDER)
 import LeftContent from './LeftContent/LeftContent'
 import RightContent from './RightContent/RightContent'
+import CustomPagination from '../../../components/CustomPagination/CustomPagination'
 
 // MATERIAL UI CORES
 import Grid from '@material-ui/core/Grid'
@@ -18,6 +19,7 @@ const Projects = () => {
       <Grid container>
         <LeftContent/>
         <RightContent/>
+        <CustomPagination/>
       </Grid>
     </div>
   )
