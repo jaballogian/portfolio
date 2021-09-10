@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // COMPONENTS (SORTED BY ORDER)
 import LeftContent from './LeftContent/LeftContent'
@@ -14,12 +14,17 @@ import useStyles from './projectUseStyles'
 const Projects = () => {
   const classes = useStyles()
 
+  const [ currentPage, setCurrentPage ] = useState(1)
+
   return (
     <div className={classes['root']}>
       <Grid container>
         <LeftContent/>
         <RightContent/>
-        <CustomPagination/>
+        <CustomPagination 
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
       </Grid>
     </div>
   )
