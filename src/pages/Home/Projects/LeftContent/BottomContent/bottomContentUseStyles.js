@@ -10,8 +10,13 @@ const useStyles = makeStyles((theme) => ({
   },
   description: {
     colors: 'black',
-    marginBottom: 50,
     height: 160,
+    [theme.breakpoints.only('lg')]: {
+      marginBottom: 32,
+    },
+    [theme.breakpoints.up('xl')]: {
+      marginBottom: 40,
+    },
   },
   linkText: {
     textDecoration: 'none',
