@@ -24,11 +24,13 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 20,
   },
   placeholderMobile: {
+    // W:H = 9:16, ONE IS 40
     width: 360,
     height: 640,
   },
   placeholderDesktopOrOther: {
-    width: 490,
+    // W:H = 16:9, ONE IS 35
+    width: 560,
     height: 315,
     margin: '20px 0px',
   },
