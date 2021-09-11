@@ -7,15 +7,30 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
     boxSizing: 'border-box',
     paddingLeft: 50,
+  },
+  rootMobile: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  rootDesktopOrOther: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   placeholder: {
-    width: 360,
-    height: 640,
     backgroundColor: 'gainsboro',
     borderRadius: 20,
+  },
+  placeholderMobile: {
+    width: 360,
+    height: 640,
+  },
+  placeholderDesktopOrOther: {
+    width: 560,
+    height: 360,
+    margin: '20px 0px',
   },
 }))
 
