@@ -7,14 +7,14 @@ import Pagination from '@material-ui/lab/Pagination'
 import useStyles from './customPaginationUseStyles'
 
 const CustomPagination = (props) => {
-  const { currentPage, setCurrentPage } = props
+  const { pageCount, currentPage, setCurrentPage } = props
 
   const classes = useStyles()
   
   return (
     <div className={classes['root']}>
       <Pagination 
-        count={10}
+        count={pageCount}
         siblingCount={0}
         boundaryCount={1}
         page={currentPage}
