@@ -8,6 +8,11 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
     boxSizing: 'border-box',
   },
+  paginationContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    transform: 'translate(0px, -75px)',
+  },
 }))
 
 export default useStyles
