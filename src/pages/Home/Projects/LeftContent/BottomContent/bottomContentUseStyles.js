@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
   description: {
     colors: 'black',
     marginBottom: 50,
+    height: 160,
   },
   linkText: {
     textDecoration: 'none',
