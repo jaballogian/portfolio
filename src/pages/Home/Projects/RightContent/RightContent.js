@@ -16,15 +16,15 @@ const RightContent = (props) => {
   let root, placeholder
   if(imageType === 'mobile') {
     root = `${classes['root']} ${classes['rootMobile']}`
-    placeholder = `${classes['placeholder']} ${classes['placeholderMobile']}`
+    placeholder = classes['placeholderMobile']
   }
   else if(imageType === 'desktop') {
     root = `${classes['root']} ${classes['rootDesktopOrOther']}`
-    placeholder = `${classes['placeholder']} ${classes['placeholderDesktopOrOther']}`
+    placeholder = classes['placeholderDesktopOrOther']
   }
   else if(imageType === 'other') {
     root = `${classes['root']} ${classes['rootDesktopOrOther']}`
-    placeholder = `${classes['placeholder']} ${classes['placeholderDesktopOrOther']}`
+    placeholder = classes['placeholderDesktopOrOther']
   }
 
   return (
@@ -33,8 +33,18 @@ const RightContent = (props) => {
       xs={6}
     >
       <div className={root}>
-        <div className={placeholder}/>
-        <div className={placeholder}/>
+        {content['imageList'].map((item, index) => (
+          <img 
+            key={index}
+            src={item} 
+            alt='' 
+            className={
+              index === 0 ?
+              placeholder :
+              `${placeholder} ${classes['secondPlaceholderPhone']}`
+            }
+          />
+        ))}
       </div>
     </Grid>
   )
