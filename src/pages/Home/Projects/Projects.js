@@ -5,6 +5,9 @@ import LeftContent from './LeftContent/LeftContent'
 import RightContent from './RightContent/RightContent'
 import CustomPagination from '../../../components/CustomPagination/CustomPagination'
 
+// DATA
+import projectsData from './projectsData'
+
 // MATERIAL UI CORES
 import Grid from '@material-ui/core/Grid'
 
@@ -19,9 +22,10 @@ const Projects = () => {
   return (
     <div className={classes['root']}>
       <Grid container>
-        <LeftContent/>
-        <RightContent/>
+        <LeftContent content={projectsData[currentPage - 1]}/>
+        <RightContent content={projectsData[currentPage - 1]}/>
         <CustomPagination 
+          pageCount={projectsData.length}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
