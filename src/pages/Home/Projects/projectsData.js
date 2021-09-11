@@ -4,7 +4,6 @@ const projectsData = [
     title: 'Project Title 1',
     type: [
       'Mobile App',
-      'Website',
       'IoT Device',
     ],
     technologies: 'Android Studio, Arudino IDE, Firebase',
