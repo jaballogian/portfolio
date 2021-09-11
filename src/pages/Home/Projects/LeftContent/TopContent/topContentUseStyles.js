@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   technologies: {
     color: colors['slateGray'],
     marginBottom: 50,
+    height: 80,
   },
 }))
 

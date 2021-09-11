@@ -36,7 +36,7 @@ const TopContent = (props) => {
         variant='h4'
         className={classes['technologies']}
       >
-        {content['technologies']}
+        {`Technologies: ${content['technologies']}`}
       </Typography>
     </div>
   )
