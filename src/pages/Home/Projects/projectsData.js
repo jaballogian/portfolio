@@ -2,7 +2,11 @@ const projectsData = [
   {
     // LEFT CONTENT
     title: 'Project Title 1',
-    type: 'Mobile App',
+    type: [
+      'Mobile App',
+      'Website',
+      'IoT Device',
+    ],
     technologies: 'Android Studio, Arudino IDE, Firebase',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     link: '/project/1',
@@ -12,7 +16,10 @@ const projectsData = [
   {
     // LEFT CONTENT
     title: 'Project Title 2',
-    type: 'Website',
+    type: [
+      'Website',
+      'IoT Device',
+    ],
     technologies: 'Android Studio, Arudino IDE, Firebase',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     link: '/project/2',
@@ -22,7 +29,9 @@ const projectsData = [
   {
     // LEFT CONTENT
     title: 'Project Title 3',
-    type: 'IoT',
+    type: [
+      'IoT Device',
+    ],
     technologies: 'Android Studio, Arudino IDE, Firebase',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     link: '/project/3',
