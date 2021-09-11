@@ -10,7 +10,9 @@ import Grid from '@material-ui/core/Grid'
 // STYLES
 import useStyles from './leftContentUseStyles'
 
-const LeftContent = () => {
+const LeftContent = (props) => {
+  const { content } = props
+
   const classes = useStyles()
 
   return (
@@ -19,8 +21,8 @@ const LeftContent = () => {
       xs={6}
     >
       <div className={classes['root']}>
-        <TopContent/>
-        <BottomContent/>
+        <TopContent content={content}/>
+        <BottomContent content={content}/>
       </div>
     </Grid>
   )
