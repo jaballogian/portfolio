@@ -28,8 +28,8 @@ const useStyles = makeStyles((theme) => ({
     height: 640,
   },
   placeholderDesktopOrOther: {
-    width: 560,
-    height: 360,
+    width: 490,
+    height: 315,
     margin: '20px 0px',
   },
 }))
