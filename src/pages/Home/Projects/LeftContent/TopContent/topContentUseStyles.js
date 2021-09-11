@@ -12,11 +12,21 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-end',
   },
   title: {
-    marginBottom: 40,
+    [theme.breakpoints.only('lg')]: {
+      marginBottom: 32,
+    },
+    [theme.breakpoints.up('xl')]: {
+      marginBottom: 40,
+    },
   },
   typeContainer: {
     display: 'flex',
-    marginBottom: 50,
+    [theme.breakpoints.only('lg')]: {
+      marginBottom: 32,
+    },
+    [theme.breakpoints.up('xl')]: {
+      marginBottom: 40,
+    },
   },
   typeItem: {
     backgroundColor: colors['carribeanGreen'],
@@ -26,15 +36,25 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: 25,
+    [theme.breakpoints.only('lg')]: {
+      marginRight: 20,
+    },
+    [theme.breakpoints.up('xl')]: {
+      marginRight: 25,
+    },
   },
   typeText: {
     color: 'white',
   },
   technologies: {
     color: colors['slateGray'],
-    marginBottom: 50,
     height: 80,
+    [theme.breakpoints.only('lg')]: {
+      marginBottom: 32,
+    },
+    [theme.breakpoints.up('xl')]: {
+      marginBottom: 40,
+    },
   },
 }))
 
