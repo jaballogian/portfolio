@@ -5,7 +5,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     boxSizing: 'border-box',
-    paddingRight: 50,
+    [theme.breakpoints.only('lg')]: {
+      paddingRight: 40,
+    },
+    [theme.breakpoints.up('xl')]: {
+      paddingRight: 50,
+    },
   },
 }))
 
