@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 40,
   },
   typeContainer: {
+    display: 'flex',
+    marginBottom: 50,
+  },
+  typeItem: {
     backgroundColor: colors['carribeanGreen'],
     width: 225,
     height: 50,
@@ -22,8 +26,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    color: 'black',
-    marginBottom: 50,
+    marginRight: 25,
   },
   typeText: {
     color: 'white',

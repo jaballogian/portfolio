@@ -23,12 +23,19 @@ const TopContent = (props) => {
 
       {/* TYPE */}
       <div className={classes['typeContainer']}>
-        <Typography
-          variant='h4'
-          className={classes['typeText']}
-        >
-          {content['type']}
-        </Typography>
+        {content['type'].map((item, index) => (
+          <div 
+            key={index}
+            className={classes['typeItem']}
+          >
+            <Typography
+              variant='h4'
+              className={classes['typeText']}
+            >
+              {item}
+            </Typography>
+          </div>
+        ))}
       </div>
 
       {/* TECHNOLOGIES */}
