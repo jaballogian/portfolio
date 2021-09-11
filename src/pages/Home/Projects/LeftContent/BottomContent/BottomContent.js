@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // MATERIAL UI CORES
 import Button from '@material-ui/core/Button'
@@ -23,17 +24,22 @@ const BottomContent = (props) => {
       </Typography>
       
       {/* EXPLORE MORE */}
-      <Button 
-        className={classes['exploreMoreContainer']} 
-        variant='contained'
+      <Link 
+        to={content['link']}
+        className={classes['linkText']}
       >
-        <Typography
-          variant='h4'
-          className={classes['exploreMoreText']}
+        <Button 
+          className={classes['exploreMoreContainer']} 
+          variant='contained'
         >
-          Explore more
-        </Typography>
-      </Button>
+          <Typography
+            variant='h4'
+            className={classes['exploreMoreText']}
+          >
+            Explore more
+          </Typography>
+        </Button>
+      </Link>
     </div>
   )
 }

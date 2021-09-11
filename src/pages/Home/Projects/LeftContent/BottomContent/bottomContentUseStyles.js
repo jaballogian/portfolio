@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
     colors: 'black',
     marginBottom: 50,
   },
+  linkText: {
+    textDecoration: 'none',
+  },
   exploreMoreContainer: {
     backgroundColor: colors['paradisePink'],
     textTransform: 'none',
