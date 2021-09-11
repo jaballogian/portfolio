@@ -1,3 +1,7 @@
+// IMAGES
+import BackgroundIphone from '../../../assets/images/backgrounds/project_iphone.svg'
+import BackgroundMacbook from '../../../assets/images/backgrounds/project_macbook.svg'
+
 const projectsData = [
   {
     // LEFT CONTENT
@@ -11,6 +15,10 @@ const projectsData = [
     link: '/project/1',
     // RIGHT CONTENT
     imageType: 'mobile',
+    imageList: [
+      BackgroundIphone,
+      BackgroundIphone
+    ],
   },
   {
     // LEFT CONTENT
@@ -24,6 +32,10 @@ const projectsData = [
     link: '/project/2',
     // RIGHT CONTENT
     imageType: 'desktop',
+    imageList: [
+      BackgroundMacbook,
+      BackgroundMacbook
+    ],
   },
   {
     // LEFT CONTENT
@@ -36,6 +48,10 @@ const projectsData = [
     link: '/project/3',
     // RIGHT CONTENT
     imageType: 'other',
+    imageList: [
+      BackgroundMacbook,
+      BackgroundMacbook
+    ],
   },
 ]
 
