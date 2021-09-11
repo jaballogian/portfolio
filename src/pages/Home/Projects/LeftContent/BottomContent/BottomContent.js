@@ -7,10 +7,10 @@ import Typography from '@material-ui/core/Typography'
 // STYLES
 import useStyles from './bottomContentUseStyles'
 
-const BottomContent = () => {
-  const classes = useStyles()
+const BottomContent = (props) => {
+  const { content } = props
 
-  const description = '(Short project description): Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+  const classes = useStyles()
 
   return (
     <div className={classes['bottomContainer']}>
@@ -19,7 +19,7 @@ const BottomContent = () => {
         variant='h4'
         className={classes['description']}
       >
-        {description}
+        {content['description']}
       </Typography>
       
       {/* EXPLORE MORE */}
