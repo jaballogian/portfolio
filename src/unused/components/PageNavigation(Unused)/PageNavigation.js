@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 
 // CONTEXTS
-import { PageNumberContext } from '../../contexts/PageNumberContext'
+import { PageNumberContext } from '../../../contexts/PageNumberContext'
 
 // IMAGES (SORTED BY ORDER)
 import IconFirst from '../../assets/images/icons/page_navigation_first.svg'
