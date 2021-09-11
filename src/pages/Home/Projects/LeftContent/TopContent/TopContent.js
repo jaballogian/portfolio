@@ -6,12 +6,10 @@ import Typography from '@material-ui/core/Typography'
 // STYLES
 import useStyles from './topContentUseStyles'
 
-const TopContent = () => {
-  const classes = useStyles()
+const TopContent = (props) => {
+  const { content } = props
 
-  const title = 'Project Title'
-  const type = 'Mobile App'
-  const technologies = 'Technologies: Technology 1, Technology 2, Technology 3'
+  const classes = useStyles()
 
   return (
     <div className={classes['topContainer']}>
@@ -20,7 +18,7 @@ const TopContent = () => {
         variant='h2'
         className={classes['title']}
       >
-        {title}
+        {content['title']}
       </Typography>
 
       {/* TYPE */}
@@ -29,7 +27,7 @@ const TopContent = () => {
           variant='h4'
           className={classes['typeText']}
         >
-          {type}
+          {content['type']}
         </Typography>
       </div>
 
@@ -38,7 +36,7 @@ const TopContent = () => {
         variant='h4'
         className={classes['technologies']}
       >
-        {technologies}
+        {content['technologies']}
       </Typography>
     </div>
   )
