@@ -6,12 +6,17 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     height: '100vh',
     boxSizing: 'border-box',
-    paddingLeft: 50,
+    [theme.breakpoints.only('lg')]: {
+      paddingLeft: 40,
+    },
+    [theme.breakpoints.up('xl')]: {
+      paddingLeft: 50,
+    },
   },
   rootMobile: {
     display: 'flex',
-    justifyContent: 'space-between',
     alignItems: 'center',
+    position: 'relative',
   },
   rootDesktopOrOther: {
     display: 'flex',
@@ -19,20 +24,36 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  placeholder: {
-    backgroundColor: 'gainsboro',
-    borderRadius: 20,
-  },
   placeholderMobile: {
-    // W:H = 9:16, ONE IS 40
-    width: 360,
-    height: 640,
+    // W:H = 9:16
+    position: 'absolute',
+    [theme.breakpoints.only('lg')]: {
+      // ONE IS 32
+      width: 288,
+      height: 512,
+    },
+    [theme.breakpoints.up('xl')]: {
+      // ONE IS 40
+      width: 360,
+      height: 640,
+    },
+  },
+  secondPlaceholderPhone: {
+    right: 0,
   },
   placeholderDesktopOrOther: {
-    // W:H = 16:9, ONE IS 35
-    width: 560,
-    height: 315,
+    // W:H = 16:9
     margin: '20px 0px',
+    [theme.breakpoints.only('lg')]: {
+      // ONE IS 30
+      width: 480,
+      height: 270,
+    },
+    [theme.breakpoints.up('xl')]: {
+      // ONE IS 35
+      width: 560,
+      height: 315,
+    },
   },
 }))
 
