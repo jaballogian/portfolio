@@ -6,6 +6,10 @@ import colors from '../../../../../utils/colors'
 
 const useStyles = makeStyles((theme) => ({
   bottomContainer: {
+    [theme.breakpoints.only('sm')]: {
+      height: '37.5vh',
+      minHeight: 300,
+    },
     [theme.breakpoints.only('md')]: {
       height: '37.5vh',
       minHeight: 300,
@@ -20,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   description: {
     colors: 'black',
     height: 160,
+    [theme.breakpoints.only('sm')]: {
+      marginBottom: 16,
+    },
     [theme.breakpoints.only('md')]: {
       marginBottom: 24,
     },
