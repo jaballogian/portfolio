@@ -9,6 +9,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     position: 'relative',
+    [theme.breakpoints.down('xs')]: {
+      height: '125vh',
+      minHeight: 1200,
+    },
     [theme.breakpoints.only('sm')]: {
       height: '125vh',
       minHeight: 1200,
