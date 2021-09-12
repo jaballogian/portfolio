@@ -9,6 +9,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
+    [theme.breakpoints.only('sm')]: {
+      height: '37.5vh',
+      minHeight: 300,
+    },
     [theme.breakpoints.only('md')]: {
       height: '37.5vh',
       minHeight: 300,
@@ -21,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
+    [theme.breakpoints.only('sm')]: {
+      marginBottom: 16,
+    },
     [theme.breakpoints.only('md')]: {
       marginBottom: 24,
     },
@@ -33,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
   },
   typeContainer: {
     display: 'flex',
+    [theme.breakpoints.only('sm')]: {
+      marginBottom: 16,
+    },
     [theme.breakpoints.only('md')]: {
       marginBottom: 24,
     },
@@ -51,6 +61,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    [theme.breakpoints.only('sm')]: {
+      marginRight: 10,
+    },
     [theme.breakpoints.only('md')]: {
       marginRight: 15,
     },
@@ -66,6 +79,10 @@ const useStyles = makeStyles((theme) => ({
   },
   technologies: {
     color: colors['slateGray'],
+    [theme.breakpoints.only('sm')]: {
+      height: 80,
+      marginBottom: 16,
+    },
     [theme.breakpoints.only('md')]: {
       marginBottom: 24,
     },
