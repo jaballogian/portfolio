@@ -5,6 +5,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     boxSizing: 'border-box',
+    [theme.breakpoints.down('xs')]: {
+      height: '75vh',
+      minHeight: 600,
+    },
     [theme.breakpoints.only('sm')]: {
       height: '75vh',
       minHeight: 600,
