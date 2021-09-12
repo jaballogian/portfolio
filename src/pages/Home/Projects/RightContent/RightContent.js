@@ -30,7 +30,7 @@ const RightContent = (props) => {
   return (
     <Grid 
       item 
-      xs={6}
+      xs={12} lg={6}
     >
       <div className={root}>
         {content['imageList'].map((item, index) => (
