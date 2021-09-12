@@ -5,6 +5,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     boxSizing: 'border-box',
+    [theme.breakpoints.only('md')]: {
+      height: '75vh',
+      minHeight: 600,
+    },
     [theme.breakpoints.only('lg')]: {
       paddingRight: 40,
     },
