@@ -6,11 +6,23 @@ import colors from '../../../../../utils/colors'
 
 const useStyles = makeStyles((theme) => ({
   bottomContainer: {
-    height: '50vh',
+    [theme.breakpoints.only('md')]: {
+      height: '37.5vh',
+      minHeight: 300,
+    },
+    [theme.breakpoints.only('lg')]: {
+      height: '50vh',
+    },
+    [theme.breakpoints.up('xl')]: {
+      height: '50vh',
+    },
   },
   description: {
     colors: 'black',
     height: 160,
+    [theme.breakpoints.only('md')]: {
+      marginBottom: 24,
+    },
     [theme.breakpoints.only('lg')]: {
       marginBottom: 32,
     },
