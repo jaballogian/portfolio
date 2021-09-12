@@ -5,17 +5,21 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '100%',
-    minHeight: 800,
     boxSizing: 'border-box',
     display: 'flex',
     alignItems: 'center',
     position: 'relative',
+    [theme.breakpoints.only('sm')]: {
+      height: '125vh',
+      minHeight: 1200,
+    },
     [theme.breakpoints.only('md')]: {
       height: '150vh',
       minHeight: 1200,
     },
     [theme.breakpoints.up('lg')]: {
       height: '100vh',
+      minHeight: 800,
     },
   },
   paginationContainer: {
