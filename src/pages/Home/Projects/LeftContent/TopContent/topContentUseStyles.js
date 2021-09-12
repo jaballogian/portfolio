@@ -6,12 +6,24 @@ import colors from '../../../../../utils/colors'
 
 const useStyles = makeStyles((theme) => ({
   topContainer: {
-    height: '50vh',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
+    [theme.breakpoints.only('md')]: {
+      height: '37.5vh',
+      minHeight: 300,
+    },
+    [theme.breakpoints.only('lg')]: {
+      height: '50vh',
+    },
+    [theme.breakpoints.up('xl')]: {
+      height: '50vh',
+    },
   },
   title: {
+    [theme.breakpoints.only('md')]: {
+      marginBottom: 24,
+    },
     [theme.breakpoints.only('lg')]: {
       marginBottom: 32,
     },
@@ -21,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
   },
   typeContainer: {
     display: 'flex',
+    [theme.breakpoints.only('md')]: {
+      marginBottom: 24,
+    },
     [theme.breakpoints.only('lg')]: {
       marginBottom: 32,
     },
@@ -36,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    [theme.breakpoints.only('md')]: {
+      marginRight: 15,
+    },
     [theme.breakpoints.only('lg')]: {
       marginRight: 20,
     },
@@ -48,11 +66,15 @@ const useStyles = makeStyles((theme) => ({
   },
   technologies: {
     color: colors['slateGray'],
-    height: 80,
+    [theme.breakpoints.only('md')]: {
+      marginBottom: 24,
+    },
     [theme.breakpoints.only('lg')]: {
+      height: 80,
       marginBottom: 32,
     },
     [theme.breakpoints.up('xl')]: {
+      height: 80,
       marginBottom: 40,
     },
   },
