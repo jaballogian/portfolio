@@ -14,19 +14,26 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: colors['cultured'],
       color: colors['slateGray'],
       borderRadius: '50%',
-      fontSize: 24,
       '&:hover': {
         backgroundColor: colors['slateGray'],
         color: colors['cultured'],
       },
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('xs')]: {
+        height: 30,
+        width: 30,
+        fontSize: 20,
+        margin: '0px 7.5px',
+      },
+      [theme.breakpoints.only('sm')]: {
         height: 40,
         width: 40,
+        fontSize: 24,
         margin: '0px 10px',
       },
       [theme.breakpoints.up('md')]: {
         height: 50,
         width: 50,
+        fontSize: 24,
         margin: '0px 12.5px',
       },
     },
@@ -43,7 +50,11 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('xs')]: {
+        height: 30,
+        width: 30,
+      },
+      [theme.breakpoints.only('sm')]: {
         height: 40,
         width: 40,
       },
