@@ -5,6 +5,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     boxSizing: 'border-box',
+    [theme.breakpoints.down('xs')]: {
+      height: '50vh',
+      minHeight: 400,
+    },
     [theme.breakpoints.only('sm')]: {
       height: '62.5vh',
       minHeight: 500,
@@ -25,7 +29,14 @@ const useStyles = makeStyles((theme) => ({
   rootMobile: {
     display: 'flex',
     position: 'relative',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('xs')]: {
+      alignItems: 'center',
+    },
+    [theme.breakpoints.only('sm')]: {
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    [theme.breakpoints.only('md')]: {
       justifyContent: 'center',
     },
     [theme.breakpoints.up('lg')]: {
@@ -36,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    [theme.breakpoints.down('xs')]: {
+      justifyContent: 'center',
+    },
     [theme.breakpoints.only('md')]: {
       justifyContent: 'flex-start',
     },
@@ -45,6 +59,12 @@ const useStyles = makeStyles((theme) => ({
   },
   placeholderMobile: {
     // W:H = 9:16
+    [theme.breakpoints.down('xs')]: {
+      // ONE IS 22
+      width: 198,
+      height: 352,
+      position: 'absolute',
+    },
     [theme.breakpoints.only('sm')]: {
       // ONE IS 24
       width: 216,
@@ -71,6 +91,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   secondPlaceholderPhone: {
+    [theme.breakpoints.down('xs')]: {
+      right: 0,
+    },
     [theme.breakpoints.up('lg')]: {
       right: 0,
     },
@@ -78,8 +101,13 @@ const useStyles = makeStyles((theme) => ({
   placeholderDesktopOrOther: {
     // W:H = 16:9
     margin: '20px 0px',
+    [theme.breakpoints.down('xs')]: {
+      // ONE IS 18
+      width: 288,
+      height: 162,
+    },
     [theme.breakpoints.only('sm')]: {
-      // ONE IS 22.5
+      // ONE IS 22
       width: 352,
       height: 198,
     },
