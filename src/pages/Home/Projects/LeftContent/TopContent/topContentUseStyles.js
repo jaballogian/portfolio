@@ -9,6 +9,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
+    [theme.breakpoints.down('xs')]: {
+      height: '37.5vh',
+      minHeight: 300,
+    },
     [theme.breakpoints.only('sm')]: {
       height: '37.5vh',
       minHeight: 300,
@@ -25,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    [theme.breakpoints.only('sm')]: {
+    [theme.breakpoints.down('sm')]: {
       marginBottom: 16,
     },
     [theme.breakpoints.only('md')]: {
@@ -40,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   typeContainer: {
     display: 'flex',
-    [theme.breakpoints.only('sm')]: {
+    [theme.breakpoints.down('sm')]: {
       marginBottom: 16,
     },
     [theme.breakpoints.only('md')]: {
@@ -55,23 +59,34 @@ const useStyles = makeStyles((theme) => ({
   },
   typeItem: {
     backgroundColor: colors['carribeanGreen'],
-    width: 225,
-    height: 50,
     borderRadius: 20,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    [theme.breakpoints.down('xs')]: {
+      marginRight: 10,
+      width: 150,
+      height: 40,
+    },
     [theme.breakpoints.only('sm')]: {
       marginRight: 10,
+      width: 200,
+      height: 40,
     },
     [theme.breakpoints.only('md')]: {
       marginRight: 15,
+      width: 225,
+      height: 50,
     },
     [theme.breakpoints.only('lg')]: {
       marginRight: 20,
+      width: 225,
+      height: 50,
     },
     [theme.breakpoints.up('xl')]: {
       marginRight: 25,
+      width: 225,
+      height: 50,
     },
   },
   typeText: {
@@ -79,6 +94,10 @@ const useStyles = makeStyles((theme) => ({
   },
   technologies: {
     color: colors['slateGray'],
+    [theme.breakpoints.down('xs')]: {
+      height: 90,
+      marginBottom: 16,
+    },
     [theme.breakpoints.only('sm')]: {
       height: 80,
       marginBottom: 16,
