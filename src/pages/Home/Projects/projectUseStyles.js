@@ -10,15 +10,15 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     position: 'relative',
     [theme.breakpoints.down('xs')]: {
-      height: '125vh',
+      // height: '125vh',
       minHeight: 1200,
     },
     [theme.breakpoints.only('sm')]: {
-      height: '125vh',
+      // height: '125vh',
       minHeight: 1200,
     },
     [theme.breakpoints.only('md')]: {
-      height: '150vh',
+      // height: '150vh',
       minHeight: 1200,
     },
     [theme.breakpoints.up('lg')]: {
