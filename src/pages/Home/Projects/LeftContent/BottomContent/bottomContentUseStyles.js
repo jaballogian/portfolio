@@ -7,15 +7,15 @@ import colors from '../../../../../utils/colors'
 const useStyles = makeStyles((theme) => ({
   bottomContainer: {
     [theme.breakpoints.down('xs')]: {
-      height: '37.5vh',
+      // height: '37.5vh',
       minHeight: 300,
     },
     [theme.breakpoints.only('sm')]: {
-      height: '37.5vh',
+      // height: '37.5vh',
       minHeight: 300,
     },
     [theme.breakpoints.only('md')]: {
-      height: '37.5vh',
+      // height: '37.5vh',
       minHeight: 300,
     },
     [theme.breakpoints.only('lg')]: {
