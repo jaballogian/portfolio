@@ -6,15 +6,15 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     boxSizing: 'border-box',
     [theme.breakpoints.down('xs')]: {
-      height: '50vh',
+      // height: '50vh',
       minHeight: 400,
     },
     [theme.breakpoints.only('sm')]: {
-      height: '62.5vh',
+      // height: '62.5vh',
       minHeight: 500,
     },
     [theme.breakpoints.only('md')]: {
-      height: '75vh',
+      // height: '75vh',
       minHeight: 600,
     },
     [theme.breakpoints.only('lg')]: {
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       justifyContent: 'center',
     },
     [theme.breakpoints.only('md')]: {
@@ -100,32 +100,39 @@ const useStyles = makeStyles((theme) => ({
   },
   placeholderDesktopOrOther: {
     // W:H = 16:9
-    margin: '20px 0px',
     [theme.breakpoints.down('xs')]: {
       // ONE IS 18
       width: 288,
       height: 162,
+      marginBottom: 20,
     },
     [theme.breakpoints.only('sm')]: {
       // ONE IS 22
       width: 352,
       height: 198,
+      marginBottom: 20,
     },
     [theme.breakpoints.only('md')]: {
       // ONE IS 25
       width: 400,
       height: 225,
+      marginBottom: 20,
     },
     [theme.breakpoints.only('lg')]: {
       // ONE IS 30
       width: 480,
       height: 270,
+      marginBottom: 40,
     },
     [theme.breakpoints.up('xl')]: {
       // ONE IS 35
       width: 560,
       height: 315,
+      marginBottom: 40,
     },
+  },
+  secondPlaceholderDesktop: {
+    marginBottom: 0,
   },
 }))
 

@@ -41,7 +41,9 @@ const RightContent = (props) => {
             className={
               index === 0 ?
               placeholder :
-              `${placeholder} ${classes['secondPlaceholderPhone']}`
+              (imageType === 'mobile' ?
+              `${placeholder} ${classes['secondPlaceholderPhone']}` :
+              `${placeholder} ${classes['secondPlaceholderDesktop']}`)
             }
           />
         ))}
