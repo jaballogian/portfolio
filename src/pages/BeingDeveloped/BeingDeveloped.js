@@ -24,32 +24,30 @@ const BeingDeveloped = () => {
         Sorry, I’m still working on this section
       </Typography>
 
-      <div className={classes['imageAndButtonContainer']}>
-        {/* BUTTON */}
-        <Link 
-          to='/'
-          className={classes['linkText']}
-        >
-          <Button 
-            className={classes['button']} 
-            variant='contained'
-          >
-            <Typography
-              variant='h4'
-              className={classes['buttonText']}
-            >
-              Back to Home
-            </Typography>
-          </Button>
-        </Link>
+      {/* IMAGE */}
+      <img 
+        src={IllustrationBeingDeveloped} 
+        alt='' 
+        className={classes['image']}
+      />
 
-        {/* IMAGE */}
-        <img 
-          src={IllustrationBeingDeveloped} 
-          alt='' 
-          className={classes['image']}
-        />
-      </div>
+      {/* BUTTON */}
+      <Link 
+        to='/'
+        className={classes['linkText']}
+      >
+        <Button 
+          className={classes['button']} 
+          variant='contained'
+        >
+          <Typography
+            variant='h4'
+            className={classes['buttonText']}
+          >
+            Back to Home
+          </Typography>
+        </Button>
+      </Link>
     </div>
   )
 }

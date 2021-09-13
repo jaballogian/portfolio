@@ -30,15 +30,45 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    marginBottom: 120,
-  },
-  imageAndButtonContainer: {
-    display: 'flex',
-    alignItems: 'flex-end',
-    justifyContent: 'center',
-    position: 'relative',
+    [theme.breakpoints.down('xs')]: {
+      marginBottom: 30,
+    },
+    [theme.breakpoints.only('sm')]: {
+      marginBottom: 30,
+    },
+    [theme.breakpoints.only('md')]: {
+      marginBottom: 40,
+    },
+    [theme.breakpoints.only('lg')]: {
+      marginBottom: 60,
+    },
+    [theme.breakpoints.up('xl')]: {
+      marginBottom: 120,
+    },
   },
   image: {
+    textAlign: 'center',
+    margin: '0px auto',
+    [theme.breakpoints.down('xs')]: {
+      width: '80%',
+      marginBottom: 30,
+    },
+    [theme.breakpoints.only('sm')]: {
+      width: '75%',
+      marginBottom: 30,
+    },
+    [theme.breakpoints.only('md')]: {
+      width: 500,
+      marginBottom: 30,
+    },
+    [theme.breakpoints.only('lg')]: {
+      width: 650,
+      marginBottom: 30,
+    },
+    [theme.breakpoints.up('xl')]: {
+      width: 800,
+      marginBottom: 40,
+    },
   },
   linkText: {
     textDecoration: 'none',
@@ -47,9 +77,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: colors['paradisePink'],
     textTransform: 'none',
     borderRadius: 10,
-    position: 'absolute',
-    left: 0,
-    bottom: 0,
     '&:hover': {
       backgroundColor: colors['redCrayola'],
     },
