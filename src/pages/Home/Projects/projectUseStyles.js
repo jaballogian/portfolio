@@ -26,6 +26,17 @@ const useStyles = makeStyles((theme) => ({
       minHeight: 800,
     },
   },
+  rootAnimation: {
+    animation: '$fadeIn 0.5s ease-in-out',
+  },
+  '@keyframes fadeIn': {
+    '0%': {
+      opacity: 0,
+    },
+    '100%': {
+      opacity: 1
+    },
+  },
   paginationContainer: {
     display: 'flex',
     justifyContent: 'center',

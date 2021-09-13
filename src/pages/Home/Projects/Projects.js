@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // COMPONENTS (SORTED BY ORDER)
 import LeftContent from './LeftContent/LeftContent'
@@ -18,10 +18,19 @@ const Projects = () => {
   const classes = useStyles()
 
   const [ currentPage, setCurrentPage ] = useState(1)
+  const [ isFade, setIsFade ] = useState(true)
+
+  useEffect(() => {
+    setIsFade(true)
+  }, [currentPage])
 
   return (
     <div className={classes['root']}>
-      <Grid container>
+      <Grid 
+        container 
+        className={isFade ? classes['rootAnimation'] : ''}
+        onAnimationEnd={() => setIsFade(false)}
+      >
         <LeftContent content={projectsData[currentPage - 1]}/>
         <RightContent content={projectsData[currentPage - 1]}/>
       </Grid>
