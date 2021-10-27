@@ -4,17 +4,16 @@ import React from 'react'
 import hardSkillList from './hardSkillData'
 
 // MATERIAL UI CORES
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
+import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 
 // STYLES
-import useStyles from './hardSkillUseStyles'
+import styles from './hardSkillStyles'
 
 const HardSkill = () => {
-  const classes = useStyles()
-
   return (
-    <div className={classes['root']}>
+    <Box sx={styles.root}>
       <Grid 
         container 
         justifyContent='center'
@@ -26,49 +25,49 @@ const HardSkill = () => {
             xs={12} lg={4}
           >
             {/* GRID ITEM CONTAINER */}
-            <div className={classes['itemContainer']}>
+            <Box sx={styles.itemContainer}>
 
               {/* TITLE CONTAINER */}
-              <div
-                className={
-                  `${classes['itemTitleContainer']}
-                  ${classes[`itemBackground${index}`]}`
+              <Box
+                sx={
+                  `${styles.itemTitleContainer}
+                  ${styles[`itemBackground${index}`]}`
                 }
               >
                 {/* TITLE */}
                 <Typography 
                   variant='h3'
-                  className={classes['itemTitle']}
+                  sx={styles.itemTitle}
                 >
-                  {item['title']}
+                  {item.title}
                 </Typography>
-              </div>
+              </Box>
 
               {/* CONTENTS */}
-              {item['contents'].map((contentItem, contentIndex) => {
-                let className = `${classes['itemContentText']} `
+              {item.contents.map((contentItem, contentIndex) => {
+                let sx = `${styles.itemContentText} `
                 if(contentIndex === 0) {
-                  className = `${classes['itemContentText']} ${classes['itemContentFirst']}`
+                  sx = `${styles.itemContentText} ${styles.itemContentFirst}`
                 }
-                else if(contentIndex === item['contents'].length - 1) {
-                  className = `${classes['itemContentText']} ${classes['itemContentLast']}`
+                else if(contentIndex === item.contents.length - 1) {
+                  sx = `${styles.itemContentText} ${styles.itemContentLast}`
                 }
 
                 return(
                   <Typography 
                     key={contentIndex}
                     variant='h4'
-                    className={className}
+                    sx={sx}
                   >
                     {contentItem}
                   </Typography>
                 )
               })}
-            </div>
+            </Box>
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Box>
   )
 }
 
