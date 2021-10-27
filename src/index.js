@@ -5,16 +5,16 @@ import ReactDOM from 'react-dom'
 import App from './App'
 
 // MATERIAL UI
-import { ThemeProvider } from '@material-ui/core/styles'
+import { ThemeProvider } from '@mui/material/styles'
 
 // STYLES
 import './index.css'
 
-// UTILS
-import fontConfig from './utils/fontConfig'
+// CONSTANTS
+import customTheme from 'constants/customTheme'
 
 ReactDOM.render(
-  <ThemeProvider theme={fontConfig}>
+  <ThemeProvider theme={customTheme}>
     <App />
   </ThemeProvider>,
   document.getElementById('root')
