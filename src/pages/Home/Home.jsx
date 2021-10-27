@@ -5,18 +5,19 @@ import Introduction from './Introduction/Introduction'
 import HardSkill from './HardSkill/HardSkill'
 import Projects from './Projects/Projects'
 
+// MATERIAL UI CORES
+import Box from '@mui/material/Box'
+
 // STYLES
-import useStyles from './homeUseStyles'
+import styles from './homeStyles'
 
 const Home = () => {
-  const classes = useStyles()
-
   return (
-    <div className={classes['root']}>
+    <Box sx={styles.root}>
       <Introduction/>
       <HardSkill/>
       <Projects/>
-    </div>
+    </Box>
   )
 }
 
