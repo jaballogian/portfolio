@@ -3,20 +3,19 @@ import React, { useState, useEffect } from 'react'
 // COMPONENTS (SORTED BY ORDER)
 import LeftContent from './LeftContent/LeftContent'
 import RightContent from './RightContent/RightContent'
-import CustomPagination from '../../../components/CustomPagination/CustomPagination'
+import CustomPagination from 'components/CustomPagination/CustomPagination'
 
 // DATA
 import projectsData from './projectsData'
 
 // MATERIAL UI CORES
-import Grid from '@material-ui/core/Grid'
+import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid'
 
 // STYLES
-import useStyles from './projectUseStyles'
+import styles from './projectStyles'
 
 const Projects = () => {
-  const classes = useStyles()
-
   const [ currentPage, setCurrentPage ] = useState(1)
   const [ isFade, setIsFade ] = useState(true)
 
@@ -25,23 +24,23 @@ const Projects = () => {
   }, [currentPage])
 
   return (
-    <div className={classes['root']}>
+    <Box sx={styles.root}>
       <Grid 
         container 
-        className={isFade ? classes['rootAnimation'] : ''}
+        sx={isFade ? styles.rootAnimation : ''}
         onAnimationEnd={() => setIsFade(false)}
       >
         <LeftContent content={projectsData[currentPage - 1]}/>
         <RightContent content={projectsData[currentPage - 1]}/>
       </Grid>
-      <div className={classes['paginationContainer']}>
+      <Box sx={styles.paginationContainer}>
         <CustomPagination 
           pageCount={projectsData.length}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
-      </div>
-    </div>
+      </Box>
+    </Box>
   )
 }
 
