@@ -2,53 +2,53 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // MATERIAL UI CORES
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import Typography from '@mui/material/Typography'
 
 // IMAGES
-import IllustrationBeingDeveloped from '../../assets/images/illustrations/being_developed.svg'
+import IllustrationBeingDeveloped from 'assets/images/illustrations/being_developed.svg'
 
 // STYLES
-import useStyles from './beingDevelopedUseStyles'
+import styles from './beingDevelopedStyles'
 
 const BeingDeveloped = () => {
-  const classes = useStyles()
-
   return (
-    <div className={classes['root']}>
+    <Box sx={styles.root}>
       {/* TITLE */}
       <Typography
         variant='h2'
-        className={classes['title']}
+        sx={styles.title}
       >
         Sorry, I’m still working on this section
       </Typography>
 
       {/* IMAGE */}
-      <img 
+      <Box
+        component='img' 
         src={IllustrationBeingDeveloped} 
         alt='' 
-        className={classes['image']}
+        sx={styles.image}
       />
 
       {/* BUTTON */}
       <Link 
         to='/'
-        className={classes['linkText']}
+        sx={styles.linkText}
       >
         <Button 
-          className={classes['button']} 
+          sx={styles.button} 
           variant='contained'
         >
           <Typography
             variant='h4'
-            className={classes['buttonText']}
+            sx={styles.buttonText}
           >
             Back to Home
           </Typography>
         </Button>
       </Link>
-    </div>
+    </Box>
   )
 }
 
