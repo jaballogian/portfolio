@@ -1,18 +1,17 @@
 import React from 'react'
 
 // MATERIAL UI LABS
-import Pagination from '@material-ui/lab/Pagination'
+import Box from '@mui/material/Box'
+import Pagination from '@mui/material/Pagination'
 
 // STYLES
-import useStyles from './customPaginationUseStyles'
+import styles from './customPaginationStyles'
 
 const CustomPagination = (props) => {
   const { pageCount, currentPage, setCurrentPage } = props
-
-  const classes = useStyles()
   
   return (
-    <div className={classes['root']}>
+    <Box sx={styles.root}>
       <Pagination 
         count={pageCount}
         siblingCount={0}
@@ -20,7 +19,7 @@ const CustomPagination = (props) => {
         page={currentPage}
         onChange={(event, value) => setCurrentPage(value)}
       />
-    </div>
+    </Box>
   )
 }
 
