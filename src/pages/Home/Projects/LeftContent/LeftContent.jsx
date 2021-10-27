@@ -5,25 +5,24 @@ import TopContent from './TopContent/TopContent'
 import BottomContent from './BottomContent/BottomContent'
 
 // MATERIAL UI CORES
-import Grid from '@material-ui/core/Grid'
+import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid'
 
 // STYLES
-import useStyles from './leftContentUseStyles'
+import styles from './leftContentStyles'
 
 const LeftContent = (props) => {
   const { content } = props
-
-  const classes = useStyles()
 
   return (
     <Grid 
       item 
       xs={12} lg={6}
     >
-      <div className={classes['root']}>
+      <Box sx={styles.root}>
         <TopContent content={content}/>
         <BottomContent content={content}/>
-      </div>
+      </Box>
     </Grid>
   )
 }
