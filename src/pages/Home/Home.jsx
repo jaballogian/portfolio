@@ -2,21 +2,23 @@ import React from 'react'
 
 // COMPONENTS (SORTED BY ORDER)
 import Introduction from './Introduction/Introduction'
-import HardSkill from './HardSkill/HardSkill'
-import Projects from './Projects/Projects'
+// import HardSkill from './HardSkill/HardSkill'
+// import Projects from './Projects/Projects'
 
 // MATERIAL UI CORES
 import Box from '@mui/material/Box'
 
 // STYLES
-import styles from './homeStyles'
+import useStyles from './homeUseStyles'
 
 const Home = () => {
+  const classes = useStyles()
+
   return (
-    <Box sx={styles.root}>
+    <Box className={classes.root}>
       <Introduction/>
-      <HardSkill/>
-      <Projects/>
+      {/* <HardSkill/>
+      <Projects/> */}
     </Box>
   )
 }
