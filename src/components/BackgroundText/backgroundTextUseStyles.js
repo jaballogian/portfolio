@@ -14,10 +14,10 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     left: '50%',
     transform: 'translateX(-50%)',
-    height: 150,
-    fontSize: 175,
+    height: 167.5,
+    fontSize: '175px !important',
     overflow: 'hidden',
-    zIndex: -1,
+    zIndex: 0,
     lineHeight: 1,
   },
 }))
