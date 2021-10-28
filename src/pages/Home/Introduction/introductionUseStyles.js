@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '80%',
   },
   title: {
-    marginBottom: '20px',
+    marginBottom: 20,
   },
   blueText: {
     display: 'inline',
