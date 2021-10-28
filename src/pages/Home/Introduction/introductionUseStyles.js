@@ -48,6 +48,25 @@ const useStyles = makeStyles((theme) => ({
   illustration: {
     width: '85%',
   },
+  backgroundText: {
+    height: 152.5,
+    textAlign: 'center',
+    [theme.breakpoints.only('xs')]: {
+      height: 105,
+    },
+    [theme.breakpoints.only('sm')]: {
+      height: 140,
+    },
+    [theme.breakpoints.only('md')]: {
+      height: 75,
+    },
+    [theme.breakpoints.only('lg')]: {
+      height: 82.5,
+    },
+    [theme.breakpoints.up('xl')]: {
+      fontSize: 175,
+    },
+  },
 }))
 
 export default useStyles
