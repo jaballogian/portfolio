@@ -9,10 +9,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: '100%',
     height: '100vh',
-    boxSizing: 'border-box',
+    bomdizing: 'border-box',
     display: 'flex',
     position: 'relative',
-    [theme.breakpoints.only('xs')]: {
+    [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
     },
   },
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    [theme.breakpoints.only('xs')]: {
+    [theme.breakpoints.down('md')]: {
       width: '100%',
     },
   },
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     color: colors.slateGray,
   },
   illustrationSection: {
-    [theme.breakpoints.only('xs')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
