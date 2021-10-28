@@ -12,14 +12,20 @@ const useStyles = makeStyles((theme) => ({
     boxSizing: 'border-box',
     display: 'flex',
     position: 'relative',
+    [theme.breakpoints.only('xs')]: {
+      flexDirection: 'column',
+    },
   },
   section: {
     width: '50%',
-    height: '100%',
+    height: '100vh',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    [theme.breakpoints.only('xs')]: {
+      width: '100%',
+    },
   },
   titleAndCaption: {
     maxWidth: '80%',
@@ -33,6 +39,11 @@ const useStyles = makeStyles((theme) => ({
   },
   caption: {
     color: colors.slateGray,
+  },
+  illustrationSection: {
+    [theme.breakpoints.only('xs')]: {
+      display: 'none',
+    },
   },
   illustration: {
     width: '85%',
