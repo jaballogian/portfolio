@@ -7,13 +7,18 @@ import BackgroundText from 'components/BackgroundText/BackgroundText'
 import IllustrationsPerson from 'assets/images/illustrations/introduction_person.svg'
 
 // MATERIAL UI CORES
+import { useTheme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 // STYLES
 import useStyles from './introductionUseStyles'
 
 const Introduction = () => {
+  const theme = useTheme()
   const classes = useStyles()
+
+  const isSmScreen = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <div className={classes.introdutionRoot}>
@@ -50,7 +55,12 @@ const Introduction = () => {
       </div>
 
       {/* BACKGROUND TEXT */}
-      <BackgroundText text='SOFTWARE ENGINEER'/>
+      <BackgroundText
+        text='SOFTWARE ENGINEER'
+        className={classes.backgroundText}
+        noWrap={isSmScreen ? false : true}
+        textVariant='h1'
+      />
     </div>
   )
 }
