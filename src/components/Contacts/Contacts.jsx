@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // MATERIAL UI CORES
 import IconButton from '@mui/material/IconButton'
@@ -14,11 +14,14 @@ import useStyles from './contactsUseStyles'
 
 const Contacts = () => {
   const classes = useStyles()
+
+  const [ hoveredItem, setHoveredItem ] = useState(null)
   
   const contactList = [
     {
       icon: <IconEmail className={classes.icon}/>,
       text: 'Email me',
+      // TODO: FIND HOW TO ATTACH EMAIL ON CLICK
       url: '',
     },
     {
@@ -50,6 +53,8 @@ const Contacts = () => {
         <IconButton
           key={index}
           className={classes.iconContainer}
+          onMouseEnter={() => setHoveredItem(index)}
+          onMouseLeave={() => setHoveredItem(null)}
         >
           {item.icon}
         </IconButton>
