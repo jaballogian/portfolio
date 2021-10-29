@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 
+// CUSTOM COMPONENTS
+import CustomTooltipContacts from 'components/Customs/CustomTooltipContacts'
+
 // MATERIAL UI CORES
 import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
 
 // MATERIAL UI ICONS
 import IconEmail from '@mui/icons-material/Email'
@@ -50,14 +54,25 @@ const Contacts = () => {
   return (
     <div className={classes.contactsRoot}>
       {contactList.map((item, index) => (
-        <IconButton
+        <CustomTooltipContacts
           key={index}
-          className={classes.iconContainer}
-          onMouseEnter={() => setHoveredItem(index)}
-          onMouseLeave={() => setHoveredItem(null)}
+          placement='right'
+          title={
+            <Typography
+              variant='subtitle1'
+            >
+              {item.text}
+            </Typography>
+          }
         >
-          {item.icon}
-        </IconButton>
+          <IconButton
+            className={classes.iconContainer}
+            onMouseEnter={() => setHoveredItem(index)}
+            onMouseLeave={() => setHoveredItem(null)}
+          >
+            {item.icon}
+          </IconButton>
+        </CustomTooltipContacts>
       ))}
     </div>
   )
