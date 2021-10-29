@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 
 // MATERIAL UI CORES
 import Typography from '@mui/material/Typography'
@@ -10,9 +10,10 @@ import useStyles from './headerUseStyles'
 const Header = () => {
   const classes = useStyles()
 
+  const history = useHistory()
+
   let location = useLocation()
   location = location.hash.replace('#', '')
-  console.log(location)
 
   const sectionList = [
     'HOME',
@@ -37,6 +38,7 @@ const Header = () => {
           key={index}
           variant='subtitle1'
           className={sectionClassName(item)}
+          onClick={() => history.push(`/#${item.toLowerCase()}`)}
         >
           {item}
         </Typography>
