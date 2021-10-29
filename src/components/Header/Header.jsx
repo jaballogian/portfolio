@@ -22,7 +22,7 @@ const Header = () => {
         <Typography
           key={index}
           variant='subtitle1'
-          className={`${classes.sectionText}`}
+          className={`${classes.sectionText} ${classes.sectionActive}`}
         >
           {item}
         </Typography>
