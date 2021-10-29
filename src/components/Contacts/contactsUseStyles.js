@@ -5,6 +5,24 @@ import colors from 'constants/colors'
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
+  contactsRoot: {
+    position: 'absolute',
+    zIndex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    bottom: 100,
+    left: 50,
+  },
+  iconContainer: {
+    marginBottom: 25,
+    backgroundColor: colors.cultured,
+    '&:last-child': {
+      marginBottom: 0,
+    },
+  },
+  icon: {
+    color: colors.slateGray,
+  },
 }))
 
 export default useStyles
