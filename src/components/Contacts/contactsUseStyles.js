@@ -19,9 +19,15 @@ const useStyles = makeStyles((theme) => ({
     '&:last-child': {
       marginBottom: 0,
     },
+    '&:hover': {
+      backgroundColor: colors.blueNCS,
+    },
   },
   icon: {
     color: colors.slateGray,
+    '&:hover': {
+      color: 'white',
+    },
   },
 }))
 
