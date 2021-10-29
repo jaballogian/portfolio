@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // CUSTOM COMPONENTS
 import CustomTooltipContacts from 'components/Customs/CustomTooltipContacts'
@@ -18,8 +18,6 @@ import useStyles from './contactsUseStyles'
 
 const Contacts = () => {
   const classes = useStyles()
-
-  const [ hoveredItem, setHoveredItem ] = useState(null)
   
   const contactList = [
     {
@@ -65,11 +63,7 @@ const Contacts = () => {
             </Typography>
           }
         >
-          <IconButton
-            className={classes.iconContainer}
-            onMouseEnter={() => setHoveredItem(index)}
-            onMouseLeave={() => setHoveredItem(null)}
-          >
+          <IconButton className={classes.iconContainer}>
             {item.icon}
           </IconButton>
         </CustomTooltipContacts>
