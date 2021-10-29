@@ -27,7 +27,7 @@ const Header = () => {
       return `${classes.sectionText} ${classes.sectionActive}`
     }
     else {
-      return classes.sectionText
+      return `${classes.sectionText} ${classes.sectionHover}`
     }
   }
 
