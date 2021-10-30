@@ -75,6 +75,8 @@ const Contacts = () => {
       open: true,
       message: `Email ${inputEmail} is copied to clipboard`, 
       severity: 'success',
+      vertical: 'bottom',
+      horizontal: 'center',
     })
   }
 
@@ -91,6 +93,7 @@ const Contacts = () => {
   return (
     <div className={classes.contactsRoot}>
       {contactList.map((item, index) => (
+        // TOOLTIP
         <CustomTooltipContacts
           key={index}
           placement='right'
@@ -102,12 +105,14 @@ const Contacts = () => {
             </Typography>
           }
         >
+          {/* ICON */}
           <IconButton 
             className={classes.iconContainer}
             onClick={() => openUrlInNewTab(item.url, index)}
             onMouseEnter={() => setHoveredItem(index)}
             onMouseLeave={() => setHoveredItem(null)}
           >
+            {/* MUI ICON */}
             {item.iconType === 'mui' ?
             <item.icon
               className={
@@ -116,6 +121,7 @@ const Contacts = () => {
                 classes.icon
               }
             /> :
+            // MDI ICON
             item.iconType === 'mdi' ?
             <MdiIcon
               path={item.iconPath}
