@@ -25,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     color: colors.slateGray,
-    '&:hover': {
-      color: 'white',
-    },
+  },
+  iconHovered: {
+    color: 'white',
   },
 }))
 

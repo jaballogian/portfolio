@@ -27,28 +27,33 @@ const Contacts = () => {
   
   const contactList = [
     {
-      icon: <IconEmail className={classes.icon}/>,
+      iconType: 'mui',
+      icon: IconEmail,
       text: 'Email me',
       // TODO: FIND HOW TO ATTACH EMAIL ON CLICK
       url: '',
     },
     {
-      icon: <IconInstagram className={classes.icon}/>,
+      iconType: 'mui',
+      icon: IconInstagram,
       text: 'Follow me',
       url: 'https://www.instagram.com/jaballogian/',
     },
     {
-      icon: <IconLinkedIn className={classes.icon}/>,
+      iconType: 'mui',
+      icon: IconLinkedIn,
       text: 'Connect me',
       url: 'https://www.linkedin.com/in/jaballogian/',
     },
     {
-      icon: <IconGitHub className={classes.icon}/>,
+      iconType: 'mui',
+      icon: IconGitHub,
       text: 'Find this code',
       url: 'https://github.com/jaballogian/portfolio',
     },
     {
-      icon: <MdiIcon path={mdiStackOverflow} className={classes.icon}/>,
+      iconType: 'mdi',
+      iconPath: mdiStackOverflow,
       text: 'Find me',
       url: 'https://stackoverflow.com/users/8339172/jabal-logian',
     },
@@ -58,8 +63,6 @@ const Contacts = () => {
     const newWindow = window.open(inputUrl, '_blank', 'noopener,noreferrer')
     if (newWindow) newWindow.opener = null
   }
-
-  console.log(hoveredItem)
 
   return (
     <div className={classes.contactsRoot}>
@@ -81,7 +84,24 @@ const Contacts = () => {
             onMouseEnter={() => setHoveredItem(index)}
             onMouseLeave={() => setHoveredItem(null)}
           >
-            {item.icon}
+            {item.iconType === 'mui' ?
+            <item.icon
+              className={
+                hoveredItem === index ?
+                `${classes.icon} ${classes.iconHovered}` :
+                classes.icon
+              }
+            /> :
+            item.iconType === 'mdi' ?
+            <MdiIcon
+              path={item.iconPath}
+              className={
+                hoveredItem === index ?
+                `${classes.icon} ${classes.iconHovered}` :
+                classes.icon
+              }
+            /> :
+            null}
           </IconButton>
         </CustomTooltipContacts>
       ))}
