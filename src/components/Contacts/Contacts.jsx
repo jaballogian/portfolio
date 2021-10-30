@@ -30,8 +30,7 @@ const Contacts = () => {
       iconType: 'mui',
       icon: IconEmail,
       text: 'Email me',
-      // TODO: FIND HOW TO ATTACH EMAIL ON CLICK
-      url: '',
+      url: 'hello.jaballogian@gmail.com',
     },
     {
       iconType: 'mui',
@@ -59,9 +58,23 @@ const Contacts = () => {
     },
   ]
 
-  const openUrlInNewTab = (inputUrl) => {
-    const newWindow = window.open(inputUrl, '_blank', 'noopener,noreferrer')
-    if (newWindow) newWindow.opener = null
+  const copyEmailToClipboard = (inputEmail) => {
+    const el = document.createElement('textarea')
+    el.value = inputEmail
+    document.body.appendChild(el)
+    el.select()
+    document.execCommand('copy')
+    document.body.removeChild(el)
+  }
+
+  const openUrlInNewTab = (inputUrl, inputIndex) => {
+    if(inputIndex === 0) {
+      copyEmailToClipboard(inputUrl)
+    }
+    else {
+      const newWindow = window.open(inputUrl, '_blank', 'noopener,noreferrer')
+      if (newWindow) newWindow.opener = null
+    }
   }
 
   return (
@@ -80,7 +93,7 @@ const Contacts = () => {
         >
           <IconButton 
             className={classes.iconContainer}
-            onClick={() => openUrlInNewTab(item.url)}
+            onClick={() => openUrlInNewTab(item.url, index)}
             onMouseEnter={() => setHoveredItem(index)}
             onMouseLeave={() => setHoveredItem(null)}
           >
