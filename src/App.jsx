@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // COMPONENTS
@@ -31,6 +31,16 @@ function App() {
       component: <BeingDeveloped/>,
     },
   ]
+
+  useEffect(() => {
+    changeToast({
+      open: true,
+      message: 'Use laptop/desktop screen to get full experience', 
+      severity: 'info',
+      vertical: 'top',
+      horizontal: 'center',
+    })
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>
