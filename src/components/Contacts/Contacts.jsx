@@ -49,6 +49,11 @@ const Contacts = () => {
     },
   ]
 
+  const openUrlInNewTab = (inputUrl) => {
+    const newWindow = window.open(inputUrl, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
+
   return (
     <div className={classes.contactsRoot}>
       {contactList.map((item, index) => (
@@ -63,7 +68,10 @@ const Contacts = () => {
             </Typography>
           }
         >
-          <IconButton className={classes.iconContainer}>
+          <IconButton 
+            className={classes.iconContainer}
+            onClick={() => openUrlInNewTab(item.url)}
+          >
             {item.icon}
           </IconButton>
         </CustomTooltipContacts>
