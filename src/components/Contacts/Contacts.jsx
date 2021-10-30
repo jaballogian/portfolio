@@ -3,6 +3,10 @@ import React from 'react'
 // CUSTOM COMPONENTS
 import CustomTooltipContacts from 'components/Customs/CustomTooltipContacts'
 
+// MATERIAL DESIGN ICONS
+import MdiIcon from '@mdi/react'
+import { mdiStackOverflow } from '@mdi/js'
+
 // MATERIAL UI CORES
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
@@ -41,11 +45,10 @@ const Contacts = () => {
       text: 'Find this code',
       url: 'https://github.com/jaballogian/portfolio',
     },
-    // TODO: CHANGE THIS INTO STACKOVERFLOW
     {
-      icon: <IconGitHub className={classes.icon}/>,
-      text: 'Find my code',
-      url: 'https://github.com/jaballogian',
+      icon: <MdiIcon path={mdiStackOverflow} className={classes.icon}/>,
+      text: 'Find me',
+      url: 'https://stackoverflow.com/users/8339172/jabal-logian',
     },
   ]
 
