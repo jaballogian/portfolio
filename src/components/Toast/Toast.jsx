@@ -31,6 +31,18 @@ const Toast = (props) => {
         color: 'black',
       }
     }
+    else if(severity === 'error') {
+      return { 
+        backgroundColor: colors.paradisePink, 
+        color: 'white',
+      }
+    }
+    else if(severity === 'warning') {
+      return { 
+        backgroundColor: colors.orangeYellowCrayota, 
+        color: 'black',
+      }
+    }
   }
 
   const handleToastClose = (event, reason) => {
@@ -74,7 +86,7 @@ Toast.defaultProps = {
 Toast.propTypes = {
   open: PropTypes.bool,
   setToast: PropTypes.func.isRequired,
-  severity: PropTypes.oneOf(['error', 'success']),
+  severity: PropTypes.oneOf(['info', 'success', 'error', 'warning']),
   message: PropTypes.string,
   vertical: PropTypes.oneOf(['top', 'bottom']),
   horizontal: PropTypes.oneOf(['left', 'center', 'right']),
