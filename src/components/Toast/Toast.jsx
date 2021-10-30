@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // MATERIAL UI CORES
-import MuiAlert from '@mui/material/Alert'
+import Alert from '@mui/material/Alert'
 import Snackbar from '@mui/material/Snackbar'
 
 const Toast = (props) => {
@@ -11,6 +11,8 @@ const Toast = (props) => {
     setToast,
     severity,
     message,
+    vertical,
+    horizontal,
   } = props
 
   const handleToastClose = (event, reason) => {
@@ -25,15 +27,16 @@ const Toast = (props) => {
       open={open} 
       autoHideDuration={6000} 
       onClose={handleToastClose}
+      anchorOrigin={{ vertical, horizontal }}
     >
-      <MuiAlert 
+      <Alert 
         elevation={6}
         variant='filled'
         onClose={handleToastClose}
         severity={severity}
       >
         {message}
-      </MuiAlert>
+      </Alert>
     </Snackbar>
   )
 }
@@ -42,6 +45,8 @@ Toast.defaultProps = {
   open: false,
   severity: 'success',
   message: '',
+  vertical: 'bottom',
+  horizontal: 'left',
 }
 
 Toast.propTypes = {
@@ -49,6 +54,8 @@ Toast.propTypes = {
   setToast: PropTypes.func.isRequired,
   severity: PropTypes.oneOf(['error', 'success']),
   message: PropTypes.string,
+  vertical: PropTypes.oneOf(['top', 'bottom']),
+  horizontal: PropTypes.oneOf(['left', 'center', 'right']),
 }
 
 export default Toast
