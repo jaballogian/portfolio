@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+// COMPONENTS
+import Toast from 'components/Toast/Toast'
+
+// CONTEXTS
+import { AllPagesContext } from 'contexts/AllPagesContext'
 
 // PAGES
 import Home from './pages/Home/Home'
 import BeingDeveloped from './pages/BeingDeveloped/BeingDeveloped'
 
 function App() {
+  const { 
+    toast, 
+    changeToast, 
+  } = useContext(AllPagesContext)
+
   const pageList = [
     // HOME PAGE
     {
@@ -22,19 +33,31 @@ function App() {
   ]
 
   return (
-    <Router>
-      <Switch>
-        {pageList.map((item, index) => (
-          <Route 
-            key={index} 
-            path={item['path']} 
-            exact={item['exact']}
-          >
-            {item['component']}
-          </Route>
-        ))}
-      </Switch>
-    </Router>
+    <>
+      {/* PAGES */}
+      <Router>
+        <Switch>
+          {pageList.map((item, index) => (
+            <Route 
+              key={index} 
+              path={item.path} 
+              exact={item.exact}
+            >
+              {item.component}
+            </Route>
+          ))}
+        </Switch>
+      </Router>
+
+      {/* TOAST */}
+      {toast &&
+      <Toast
+        open={toast.open}
+        setToast={changeToast}
+        severity={toast.severity}
+        message={toast.message}
+      />}
+    </>
   )
 }
 
