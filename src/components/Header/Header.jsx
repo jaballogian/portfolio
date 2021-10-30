@@ -33,7 +33,7 @@ const Header = () => {
 
   useEffect(() => {
     history.push('/#home')
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className={classes.headerRoot}>
