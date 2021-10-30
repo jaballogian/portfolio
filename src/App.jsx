@@ -56,6 +56,8 @@ function App() {
         setToast={changeToast}
         severity={toast.severity}
         message={toast.message}
+        vertical={toast.vertical}
+        horizontal={toast.horizontal}
       />}
     </>
   )
