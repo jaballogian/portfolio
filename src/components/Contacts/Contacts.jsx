@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+
+// CONTEXTS
+import { AllPagesContext } from 'contexts/AllPagesContext'
 
 // CUSTOM COMPONENTS
 import CustomTooltipContacts from 'components/Customs/CustomTooltipContacts'
@@ -21,6 +24,8 @@ import IconLinkedIn from '@mui/icons-material/LinkedIn'
 import useStyles from './contactsUseStyles'
 
 const Contacts = () => {
+  const { changeToast } = useContext(AllPagesContext)
+
   const classes = useStyles()
 
   const [ hoveredItem, setHoveredItem ] = useState(null)
@@ -65,6 +70,12 @@ const Contacts = () => {
     el.select()
     document.execCommand('copy')
     document.body.removeChild(el)
+    
+    changeToast({
+      open: true,
+      message: `Email ${inputEmail} is copied to clipboard`, 
+      severity: 'success',
+    })
   }
 
   const openUrlInNewTab = (inputUrl, inputIndex) => {
