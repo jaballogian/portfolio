@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 
 // MATERIAL UI CORES
@@ -30,6 +30,10 @@ const Header = () => {
       return `${classes.sectionText} ${classes.sectionHover}`
     }
   }
+
+  useEffect(() => {
+    history.push('/#home')
+  }, [])
 
   return (
     <div className={classes.headerRoot}>
