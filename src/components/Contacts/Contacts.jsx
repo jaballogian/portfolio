@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // CUSTOM COMPONENTS
 import CustomTooltipContacts from 'components/Customs/CustomTooltipContacts'
@@ -22,6 +22,8 @@ import useStyles from './contactsUseStyles'
 
 const Contacts = () => {
   const classes = useStyles()
+
+  const [ hoveredItem, setHoveredItem ] = useState(null)
   
   const contactList = [
     {
@@ -57,6 +59,8 @@ const Contacts = () => {
     if (newWindow) newWindow.opener = null
   }
 
+  console.log(hoveredItem)
+
   return (
     <div className={classes.contactsRoot}>
       {contactList.map((item, index) => (
@@ -74,6 +78,8 @@ const Contacts = () => {
           <IconButton 
             className={classes.iconContainer}
             onClick={() => openUrlInNewTab(item.url)}
+            onMouseEnter={() => setHoveredItem(index)}
+            onMouseLeave={() => setHoveredItem(null)}
           >
             {item.icon}
           </IconButton>
