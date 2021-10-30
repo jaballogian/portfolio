@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+// CONSTANTS
+import colors from 'constants/colors'
+
 // MATERIAL UI CORES
 import Alert from '@mui/material/Alert'
 import Snackbar from '@mui/material/Snackbar'
@@ -14,6 +17,21 @@ const Toast = (props) => {
     vertical,
     horizontal,
   } = props
+
+  const backgroundAndTextColor = () => {
+    if(severity === 'info') {
+      return { 
+        backgroundColor: colors.blueNCS, 
+        color: 'white',
+      }
+    }
+    else if(severity === 'success') {
+      return { 
+        backgroundColor: colors.carribeanGreen, 
+        color: 'black',
+      }
+    }
+  }
 
   const handleToastClose = (event, reason) => {
     if (reason === 'clickaway') {
@@ -34,6 +52,10 @@ const Toast = (props) => {
         variant='filled'
         onClose={handleToastClose}
         severity={severity}
+        style={{ 
+          backgroundColor: backgroundAndTextColor().backgroundColor,
+          color: backgroundAndTextColor().color,
+        }}
       >
         {message}
       </Alert>
