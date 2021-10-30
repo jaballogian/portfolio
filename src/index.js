@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom'
 // COMPONENTS
 import App from './App'
 
+// CONTEXTS
+import { AllPagesContextProvider } from 'contexts/AllPagesContext'
+
 // MATERIAL UI
 import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles'
 
@@ -16,7 +19,9 @@ import customTheme from 'constants/customTheme'
 ReactDOM.render(
   <ThemeProvider theme={customTheme}>
     <StyledEngineProvider injectFirst>
-      <App />
+      <AllPagesContextProvider>
+        <App/>
+      </AllPagesContextProvider>
     </StyledEngineProvider>
   </ThemeProvider>,
   document.getElementById('root')
