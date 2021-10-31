@@ -6,10 +6,6 @@ import { AllPagesContext } from 'contexts/AllPagesContext'
 // CUSTOM COMPONENTS
 import CustomTooltipContacts from 'components/Customs/CustomTooltipContacts'
 
-// MATERIAL DESIGN ICONS
-import MdiIcon from '@mdi/react'
-import { mdiStackOverflow } from '@mdi/js'
-
 // MATERIAL UI CORES
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
@@ -32,34 +28,24 @@ const Contacts = () => {
   
   const contactList = [
     {
-      iconType: 'mui',
       icon: IconEmail,
       text: 'Email me',
       url: 'hello.jaballogian@gmail.com',
     },
     {
-      iconType: 'mui',
       icon: IconInstagram,
       text: 'Follow me',
       url: 'https://www.instagram.com/jaballogian/',
     },
     {
-      iconType: 'mui',
       icon: IconLinkedIn,
       text: 'Connect me',
       url: 'https://www.linkedin.com/in/jaballogian/',
     },
     {
-      iconType: 'mui',
       icon: IconGitHub,
       text: 'Find this code',
       url: 'https://github.com/jaballogian/portfolio',
-    },
-    {
-      iconType: 'mdi',
-      iconPath: mdiStackOverflow,
-      text: 'Find me',
-      url: 'https://stackoverflow.com/users/8339172/jabal-logian',
     },
   ]
 
@@ -105,33 +91,21 @@ const Contacts = () => {
             </Typography>
           }
         >
-          {/* ICON */}
+          {/* ICON BUTTON */}
           <IconButton 
             className={classes.iconContainer}
             onClick={() => openUrlInNewTab(item.url, index)}
             onMouseEnter={() => setHoveredItem(index)}
             onMouseLeave={() => setHoveredItem(null)}
           >
-            {/* MUI ICON */}
-            {item.iconType === 'mui' ?
+            {/* ICON */}
             <item.icon
               className={
                 hoveredItem === index ?
                 `${classes.icon} ${classes.iconHovered}` :
                 classes.icon
               }
-            /> :
-            // MDI ICON
-            item.iconType === 'mdi' ?
-            <MdiIcon
-              path={item.iconPath}
-              className={
-                hoveredItem === index ?
-                `${classes.icon} ${classes.iconHovered}` :
-                classes.icon
-              }
-            /> :
-            null}
+            />
           </IconButton>
         </CustomTooltipContacts>
       ))}
