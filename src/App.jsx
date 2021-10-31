@@ -35,7 +35,7 @@ function App() {
   useEffect(() => {
     changeToast({
       open: true,
-      message: 'Use laptop/desktop screen to get full experience', 
+      message: 'Use laptop/desktop screen to get better experience', 
       severity: 'info',
       vertical: 'top',
       horizontal: 'center',
