@@ -51,12 +51,14 @@ const HeaderContactsController = () => {
           rootClassName={classes.headerRoot}
           sectionTextTypography='h2'
           sectionTextClassName={classes.headerSectionText}
+          sectionTextOnClick={() => setIsNavigationOpen(false)}
         />
 
         {/* CONTACTS ON XS SCREEN */}
         <Contacts
           rootClassName={classes.contactsRoot}
           iconContainerClassName={classes.contactsIconContainer}
+          tooltipPlacement='top'
         />
       </div>}
 
