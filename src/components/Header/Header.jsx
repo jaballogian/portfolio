@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 // MATERIAL UI CORES
 import Typography from '@mui/material/Typography'
@@ -7,7 +8,13 @@ import Typography from '@mui/material/Typography'
 // STYLES
 import useStyles from './headerUseStyles'
 
-const Header = () => {
+const Header = (props) => {
+  const { 
+    rootClassName,
+    sectionTextTypography,
+    sectionTextClassName,
+   } = props
+  
   const classes = useStyles()
 
   const history = useHistory()
@@ -24,10 +31,10 @@ const Header = () => {
 
   const sectionClassName = (inputItem) => {
     if(inputItem.toLowerCase() === location.toLowerCase()) {
-      return `${classes.sectionText} ${classes.sectionActive}`
+      return `${classes.sectionText} ${classes.sectionActive} ${sectionTextClassName}`
     }
     else {
-      return `${classes.sectionText} ${classes.sectionHover}`
+      return `${classes.sectionText} ${classes.sectionHover} ${sectionTextClassName}`
     }
   }
 
@@ -36,11 +43,11 @@ const Header = () => {
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className={classes.headerRoot}>
+    <div className={`${classes.headerRoot} ${rootClassName}`}>
       {sectionList.map((item, index) => (
         <Typography
           key={index}
-          variant='subtitle1'
+          variant={sectionTextTypography ? sectionTextTypography : 'subtitle1'}
           className={sectionClassName(item)}
           onClick={() => history.push(`/#${item.toLowerCase()}`)}
         >
@@ -49,6 +56,18 @@ const Header = () => {
       ))}
     </div>
   )
+}
+
+Header.defaultProps = {
+  rootClassName: '',
+  sectionTextTypography: 'subtitle1',
+  sectionTextClassName: '',
+}
+
+Header.propTypes = {
+  rootClassName: PropTypes.string,
+  sectionTextTypography: PropTypes.string,
+  sectionTextClassName: PropTypes.string,
 }
 
 export default Header
