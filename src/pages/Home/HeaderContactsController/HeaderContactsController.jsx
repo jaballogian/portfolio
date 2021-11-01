@@ -36,8 +36,14 @@ const HeaderContactsController = () => {
       </IconButton>}
 
       {/* NAVIGATION ON XS SCREEN */}
-      {breakpointType === 'xs' && isNavigationOpen &&
-      <div className={classes.navigationContainer}>
+      {breakpointType === 'xs' &&
+      <div
+        className={
+          isNavigationOpen ? 
+          classes.navigationContainer : 
+          `${classes.navigationContainer} ${classes.hidden}`
+        }
+      >
         {/* CLOSE BUTTON */}
         <IconButton 
           className={classes.iconToggleContainer}

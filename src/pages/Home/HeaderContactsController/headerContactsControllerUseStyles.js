@@ -15,6 +15,12 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
     width: '100vw',
     overflow: 'hidden',
+    transform: 'translateX(0%)',
+    transition: 'transform 0.25s ease-in-out',
+  },
+  hidden: {
+    transform: 'translateX(-100%)',
+    transition: 'transform 0.25s ease-in-out',
   },
   headerRoot: {
     flexDirection: 'column',
