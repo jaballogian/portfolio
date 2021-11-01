@@ -7,8 +7,6 @@ const useStyles = makeStyles((theme) => ({
     right: 20,
     top: 20,
     zIndex: 1,
-    height: 50,
-    width: 50,
   },
   navigationContainer: {
     position: 'fixed',
@@ -33,6 +31,19 @@ const useStyles = makeStyles((theme) => ({
     },
     '&::after': {
       display: 'none',
+    },
+  },
+  contactsRoot: {
+    flexDirection: 'row',
+    left: '50%',
+    bottom: 20,
+    transform: 'translateX(-50%)',
+  },
+  contactsIconContainer: {
+    marginBottom: 0,
+    marginRight: 15,
+    '&:last-child': {
+      marginRight: 0,
     },
   },
 }))
