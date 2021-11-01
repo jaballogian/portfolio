@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react'
+import PropTypes from 'prop-types'
 
 // CONTEXTS
 import { AllPagesContext } from 'contexts/AllPagesContext'
@@ -19,7 +20,12 @@ import IconLinkedIn from '@mui/icons-material/LinkedIn'
 // STYLES
 import useStyles from './contactsUseStyles'
 
-const Contacts = () => {
+const Contacts = (props) => {
+  const { 
+    rootClassName,
+    iconContainerClassName,
+   } = props
+
   const { changeToast } = useContext(AllPagesContext)
 
   const classes = useStyles()
@@ -77,7 +83,7 @@ const Contacts = () => {
   }
 
   return (
-    <div className={classes.contactsRoot}>
+    <div className={`${classes.contactsRoot} ${rootClassName}`}>
       {contactList.map((item, index) => (
         // TOOLTIP
         <CustomTooltipContacts
@@ -93,7 +99,7 @@ const Contacts = () => {
         >
           {/* ICON BUTTON */}
           <IconButton 
-            className={classes.iconContainer}
+            className={`${classes.iconContainer} ${iconContainerClassName}`}
             onClick={() => openUrlInNewTab(item.url, index)}
             onMouseEnter={() => setHoveredItem(index)}
             onMouseLeave={() => setHoveredItem(null)}
@@ -111,6 +117,16 @@ const Contacts = () => {
       ))}
     </div>
   )
+}
+
+Contacts.defaultProps = {
+  rootClassName: '',
+  iconContainerClassName: '',
+}
+
+Contacts.propTypes = {
+  rootClassName: PropTypes.string,
+  iconContainerClassName: PropTypes.string,
 }
 
 export default Contacts
