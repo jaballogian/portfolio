@@ -24,6 +24,7 @@ const Contacts = (props) => {
   const { 
     rootClassName,
     iconContainerClassName,
+    tooltipPlacement,
    } = props
 
   const { changeToast } = useContext(AllPagesContext)
@@ -88,7 +89,7 @@ const Contacts = (props) => {
         // TOOLTIP
         <CustomTooltipContacts
           key={index}
-          placement='right'
+          placement={tooltipPlacement ? tooltipPlacement : 'right'}
           title={
             <Typography
               variant='subtitle1'
@@ -122,11 +123,13 @@ const Contacts = (props) => {
 Contacts.defaultProps = {
   rootClassName: '',
   iconContainerClassName: '',
+  tooltipPlacement: 'right',
 }
 
 Contacts.propTypes = {
   rootClassName: PropTypes.string,
   iconContainerClassName: PropTypes.string,
+  tooltipPlacement: PropTypes.oneOf(['top', 'right'])
 }
 
 export default Contacts
