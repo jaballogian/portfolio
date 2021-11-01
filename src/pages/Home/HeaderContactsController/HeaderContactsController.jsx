@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext } from 'react'
 
 // COMPONENTS
 import Header from 'components/Header/Header'
@@ -11,6 +11,7 @@ import { AllPagesContext } from 'contexts/AllPagesContext'
 import IconButton from '@mui/material/IconButton'
 
 // MATERIAL UI ICONS
+import IconClose from '@mui/icons-material/Close'
 import IconMenu from '@mui/icons-material/Menu'
 
 // STYLES
@@ -21,15 +22,30 @@ const HeaderContactsController = () => {
 
   const classes = useStyles()
 
-  console.log(breakpointType)
+  const [ isNavigationOpen, setIsNavigationOpen ] = useState(false)
 
   return (
     <>
-      {/* TOGGLE ICON FOR XS SCREEN */}
+      {/* TOGGLE NAVIGATION ICON FOR XS SCREEN */}
       {breakpointType === 'xs' &&
-      <IconButton className={classes.iconToggleContainer}>
+      <IconButton 
+        className={classes.iconToggleContainer}
+        onClick={() => setIsNavigationOpen(true)}
+      >
         <IconMenu/>
       </IconButton>}
+
+      {/* NAVIGATION ON XS SCREEN */}
+      {breakpointType === 'xs' && isNavigationOpen &&
+      <div className={classes.navigationContainer}>
+        {/* CLOSE BUTTON */}
+        <IconButton 
+          className={classes.iconToggleContainer}
+          onClick={() => setIsNavigationOpen(false)}
+        >
+          <IconClose/>
+        </IconButton>
+      </div>}
 
       {/* SM TO XL SCREEN */}
       {breakpointType !== 'xs' &&
