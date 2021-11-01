@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     bottom: 100,
     left: 50,
+    [theme.breakpoints.only('sm')]: {
+      left: 25,
+    },
   },
   iconContainer: {
     marginBottom: 25,
