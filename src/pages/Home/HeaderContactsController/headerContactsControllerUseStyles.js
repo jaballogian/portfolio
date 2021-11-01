@@ -2,7 +2,11 @@
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
-  headerContactsControllerRoot: {
+  iconToggleContainer: {
+    position: 'absolute',
+    right: 20,
+    top: 20,
+    zIndex: 1,
   },
 }))
 
