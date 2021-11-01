@@ -1,8 +1,9 @@
 import React from 'react'
 
 // COMPONENTS (SORTED BY ORDER)
-import Header from 'components/Header/Header'
-import Contacts from 'components/Contacts/Contacts'
+import HeaderContactsController from './HeaderContactsController/HeaderContactsController'
+// import Header from 'components/Header/Header'
+// import Contacts from 'components/Contacts/Contacts'
 import Introduction from './Introduction/Introduction'
 // import HardSkill from './HardSkill/HardSkill'
 // import Projects from './Projects/Projects'
@@ -15,8 +16,9 @@ const Home = () => {
 
   return (
     <div className={classes.root}>
-      <Header/>
-      <Contacts/>
+      <HeaderContactsController/>
+      {/* <Header/>
+      <Contacts/> */}
       <Introduction/>
       {/* <HardSkill/>
       <Projects/> */}
