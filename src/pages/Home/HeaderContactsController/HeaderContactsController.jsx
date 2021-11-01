@@ -45,6 +45,13 @@ const HeaderContactsController = () => {
         >
           <IconClose/>
         </IconButton>
+
+        {/* HEADER ON XS SCREEN */}
+        <Header
+          rootClassName={classes.headerRoot}
+          sectionTextTypography='h2'
+          sectionTextClassName={classes.headerSectionText}
+        />
       </div>}
 
       {/* SM TO XL SCREEN */}
