@@ -13,6 +13,7 @@ const Header = (props) => {
     rootClassName,
     sectionTextTypography,
     sectionTextClassName,
+    sectionTextOnClick,
    } = props
   
   const classes = useStyles()
@@ -38,6 +39,11 @@ const Header = (props) => {
     }
   }
 
+  const onSectionTextIsClick = (inputItem) => {
+    history.push(`/#${inputItem.toLowerCase()}`)
+    sectionTextOnClick && sectionTextOnClick()
+  }
+
   useEffect(() => {
     history.push('/#home')
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
@@ -49,7 +55,7 @@ const Header = (props) => {
           key={index}
           variant={sectionTextTypography ? sectionTextTypography : 'subtitle1'}
           className={sectionClassName(item)}
-          onClick={() => history.push(`/#${item.toLowerCase()}`)}
+          onClick={() => onSectionTextIsClick(item)}
         >
           {item}
         </Typography>
@@ -68,6 +74,7 @@ Header.propTypes = {
   rootClassName: PropTypes.string,
   sectionTextTypography: PropTypes.string,
   sectionTextClassName: PropTypes.string,
+  sectionTextOnClick: PropTypes.func,
 }
 
 export default Header
