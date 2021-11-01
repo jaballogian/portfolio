@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     '&:last-child': {
       marginRight: 0,
     },
+    [theme.breakpoints.only('sm')]: {
+      marginRight: 50,
+    },
   },
   sectionHover: {
     '&:hover': {
