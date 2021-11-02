@@ -3,7 +3,7 @@ import React from 'react'
 // COMPONENTS (SORTED BY ORDER)
 import HeaderContactsController from './HeaderContactsController/HeaderContactsController'
 import Introduction from './Introduction/Introduction'
-// import HardSkill from './HardSkill/HardSkill'
+import HardSkill from './HardSkill/HardSkill'
 // import Projects from './Projects/Projects'
 import Footer from 'components/Footer/Footer'
 
@@ -17,8 +17,8 @@ const Home = () => {
     <div className={classes.root}>
       <HeaderContactsController/>
       <Introduction/>
-      {/* <HardSkill/>
-      <Projects/> */}
+      <HardSkill/>
+      {/* <Projects/> */}
       <Footer/>
     </div>
   )
