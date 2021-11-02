@@ -26,12 +26,14 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 100,
     [theme.breakpoints.only('xs')]: {
       paddingLeft: 0,
-    },
-    [theme.breakpoints.between('sm', 'lg')]: {
-      paddingLeft: 75,
-    },
-    [theme.breakpoints.down('md')]: {
       width: '100%',
+    },
+    [theme.breakpoints.only('sm')]: {
+      paddingLeft: 75,
+      width: '100%',
+    },
+    [theme.breakpoints.only('md')]: {
+      paddingLeft: 75,
     },
   },
   titleAndCaption: {
@@ -53,11 +55,15 @@ const useStyles = makeStyles((theme) => ({
   illustrationSection: {
     paddingLeft: 0,
     paddingRight: 100,
-    [theme.breakpoints.between('sm', 'lg')]: {
+    [theme.breakpoints.only('xs')]: {
+      display: 'none',
+    },
+    [theme.breakpoints.only('sm')]: {
+      display: 'none',
       paddingRight: 75,
     },
-    [theme.breakpoints.down('md')]: {
-      display: 'none',
+    [theme.breakpoints.only('md')]: {
+      paddingRight: 75,
     },
   },
   illustration: {
