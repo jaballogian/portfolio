@@ -7,17 +7,18 @@ const hardSkillList = [
       'React Native',
       'Firebase',
       'Arduino IDE',
-    ]
+    ],
   },
   {
     title: 'Languages',
     contents: [
       'HTML',
       'CSS',
-      'Javascript (ES6)',
+      'Javascript',
       'Java',
       'Python',
       'C++',
+      'Typescript',
     ],
   },
   {
