@@ -1,24 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 // COMPONENTS
 import BackgroundText from 'components/BackgroundText/BackgroundText'
+
+// CONTEXTS
+import { AllPagesContext } from 'contexts/AllPagesContext'
 
 // IMAGES
 import IllustrationsPerson from 'assets/images/illustrations/introduction_person.svg'
 
 // MATERIAL UI CORES
-import { useTheme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
-import useMediaQuery from '@mui/material/useMediaQuery'
 
 // STYLES
 import useStyles from './introductionUseStyles'
 
 const Introduction = () => {
-  const theme = useTheme()
-  const classes = useStyles()
+  const { breakpointType } = useContext(AllPagesContext)
 
-  const isSmScreen = useMediaQuery(theme.breakpoints.down('md'))
+  const classes = useStyles()
 
   return (
     <div className={classes.introdutionRoot}>
@@ -56,7 +56,7 @@ const Introduction = () => {
       <BackgroundText
         text='SOFTWARE ENGINEER'
         className={classes.backgroundText}
-        noWrap={isSmScreen ? false : true}
+        noWrap={(breakpointType === 'xs' || breakpointType === 'sm') ? false : true}
         textVariant='h1'
       />
     </div>
