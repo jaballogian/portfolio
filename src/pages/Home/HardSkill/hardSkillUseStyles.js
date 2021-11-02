@@ -6,7 +6,10 @@ import IllustrationLegos from 'assets/images/illustrations/hard_skill_legos.svg'
 import IllustrationCode from 'assets/images/illustrations/hard_skill_code.svg'
 import IllustrationTiles from 'assets/images/illustrations/hard_skill_tiles.svg'
 
-const styles = {
+// MATERIAL UI STYLES
+import { makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '100%',
@@ -79,15 +82,15 @@ const styles = {
     // },
   },
   itemBackground0: {
-    backgroundColor: colors['paradisePink'],
+    backgroundColor: colors.paradisePink,
     backgroundImage: `url(${IllustrationLegos})`,
   },
   itemBackground1: {
-    backgroundColor: colors['orangeYellowCrayota'],
+    backgroundColor: colors.orangeYellowCrayota,
     backgroundImage: `url(${IllustrationCode})`,
   },
   itemBackground2: {
-    backgroundColor: colors['carribeanGreen'],
+    backgroundColor: colors.carribeanGreen,
     backgroundImage: `url(${IllustrationTiles})`,
   },
   itemTitle: {
@@ -154,6 +157,6 @@ const styles = {
     //   marginBottom: 45,
     // },
   },
-}
+}))
 
-export default styles
+export default useStyles
