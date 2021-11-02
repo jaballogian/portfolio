@@ -12,7 +12,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     bottom: 100,
     left: 50,
-    [theme.breakpoints.between('sm', 'lg')]: {
+    [theme.breakpoints.only('sm')]: {
+      left: 25,
+    },
+    [theme.breakpoints.only('md')]: {
       left: 25,
     },
   },
