@@ -1,5 +1,8 @@
 import React from 'react'
 
+// MATERIAL UI CORES
+import Typography from '@mui/material/Typography'
+
 // STYLES
 import useStyles from './footerUseStyles'
 
@@ -8,7 +11,21 @@ const Footer = () => {
 
   return (
     <div className={classes.footerRoot}>
-      Footer
+      {/* TITLE */}
+      <Typography 
+        variant='subtitle1'
+        className={classes.title}
+      >
+        This website is designed and created by me, Jabal Logian
+      </Typography>
+
+      {/* COPYRIGHT */}
+      <Typography
+        variant='subtitle1'
+        className={classes.copyright}
+      >
+        Copyright © 2021 Jabal Logian
+      </Typography>
     </div>
   )
 }
