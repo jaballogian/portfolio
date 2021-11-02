@@ -38,9 +38,7 @@ const Introduction = () => {
             variant='h3'
             className={classes.caption}
           >
-            A frontend developer,
-            <br/>mobile application developer,
-            <br/>and IoT engineer.
+            A frontend developer, mobile application developer, and IoT engineer.
           </Typography>
         </div>
       </div>

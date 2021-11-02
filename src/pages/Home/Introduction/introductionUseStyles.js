@@ -23,12 +23,22 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    paddingLeft: 100,
+    [theme.breakpoints.only('xs')]: {
+      paddingLeft: 0,
+    },
+    [theme.breakpoints.between('sm', 'lg')]: {
+      paddingLeft: 75,
+    },
     [theme.breakpoints.down('md')]: {
       width: '100%',
     },
   },
   titleAndCaption: {
-    maxWidth: '80%',
+    maxWidth: '90%',
+    [theme.breakpoints.only('xs')]: {
+      maxWidth: '80%',
+    },
   },
   title: {
     marginBottom: 20,
@@ -41,12 +51,18 @@ const useStyles = makeStyles((theme) => ({
     color: colors.slateGray,
   },
   illustrationSection: {
+    paddingLeft: 0,
+    paddingRight: 100,
+    [theme.breakpoints.between('sm', 'lg')]: {
+      paddingRight: 75,
+    },
     [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
   illustration: {
-    width: '85%',
+    width: '100%',
+    maxWidth: 650,
   },
   backgroundText: {
     height: 152.5,
