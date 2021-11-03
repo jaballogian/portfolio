@@ -13,6 +13,15 @@ const useStyles = makeStyles((theme) => ({
     top: 67,
     left: '50%',
     transform: 'translateX(-50%)',
+    [theme.breakpoints.only('sm')]: {
+      top: 25,
+    },
+    [theme.breakpoints.only('md')]: {
+      top: 25,
+    },
+    [theme.breakpoints.only('lg')]: {
+      top: 50,
+    },
   },
   sectionText: {
     color: colors.slateGray,
