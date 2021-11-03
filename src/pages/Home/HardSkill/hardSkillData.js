@@ -24,7 +24,7 @@ const hardSkillList = [
   {
     title: 'Tools',
     contents: [
-      'Git',
+      'Git & Github',
       'Notion',
       'Trello',
       'Jira',
