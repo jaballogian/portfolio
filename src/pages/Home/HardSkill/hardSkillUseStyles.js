@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: '0px 100px',
+    position: 'relative',
     [theme.breakpoints.only('xs')]: {
       padding: '50px 25px',
     },
@@ -115,6 +116,25 @@ const useStyles = makeStyles((theme) => ({
       '&:first-child': {
         marginTop: 20,
       },
+    },
+  },
+  backgroundText: {
+    height: 155,
+    textAlign: 'center',
+    [theme.breakpoints.only('xs')]: {
+      height: 50,
+    },
+    [theme.breakpoints.only('sm')]: {
+      height: 67.5,
+    },
+    [theme.breakpoints.only('md')]: {
+      height: 75,
+    },
+    [theme.breakpoints.only('lg')]: {
+      height: 85,
+    },
+    [theme.breakpoints.up('xl')]: {
+      fontSize: 175,
     },
   },
 }))

@@ -1,5 +1,8 @@
 import React from 'react'
 
+// COMPONENTS
+import BackgroundText from 'components/BackgroundText/BackgroundText'
+
 // DATA
 import hardSkillList from './hardSkillData'
 
@@ -60,6 +63,14 @@ const HardSkill = () => {
           </Grid>
         ))}
       </Grid>
+
+      {/* BACKGROUND TEXT */}
+      <BackgroundText
+        text='HARD SKILLS'
+        className={classes.backgroundText}
+        noWrap={true}
+        textVariant='h1'
+      />
     </div>
   )
 }
