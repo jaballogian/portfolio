@@ -14,7 +14,7 @@ const HardSkill = () => {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
+    <div className={classes.hardSkillRoot}>
       <Grid 
         container 
         justifyContent='center'
@@ -45,25 +45,17 @@ const HardSkill = () => {
               </div>
 
               {/* CONTENTS */}
-              {item.contents.map((contentItem, contentIndex) => {
-                let className = `${classes.itemContentText}`
-                if(contentIndex === 0) {
-                  className = `${classes.itemContentText} ${classes.itemContentFirst}`
-                }
-                else if(contentIndex === item.contents.length - 1) {
-                  className = `${classes.itemContentText} ${classes.itemContentLast}`
-                }
-
-                return(
+              <div>
+                {item.contents.map((contentItem, contentIndex) => (
                   <Typography 
                     key={contentIndex}
                     variant='h5'
-                    className={className}
+                    className={classes.itemContentText}
                   >
                     {contentItem}
                   </Typography>
-                )
-              })}
+                ))}
+              </div>
             </div>
           </Grid>
         ))}
