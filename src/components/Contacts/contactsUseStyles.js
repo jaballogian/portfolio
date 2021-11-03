@@ -6,7 +6,7 @@ import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
   contactsRoot: {
-    position: 'absolute',
+    position: 'fixed',
     zIndex: 1,
     display: 'flex',
     flexDirection: 'column',
