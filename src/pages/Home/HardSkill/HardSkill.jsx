@@ -2,6 +2,7 @@ import React from 'react'
 
 // COMPONENTS
 import BackgroundText from 'components/BackgroundText/BackgroundText'
+import StackoverflowBadges from '../StackoverflowBadges/StackOverflowBadges'
 
 // DATA
 import hardSkillList from './hardSkillData'
@@ -71,6 +72,9 @@ const HardSkill = () => {
         noWrap={true}
         textVariant='h1'
       />
+
+      {/* STACKOVERFLOW BADGES */}
+      <StackoverflowBadges/>
     </div>
   )
 }
