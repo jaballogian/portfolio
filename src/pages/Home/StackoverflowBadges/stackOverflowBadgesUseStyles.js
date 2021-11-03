@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 10,
   },
   text: {
-    lineHeight: 1,
+    lineHeight: 1.2,
   },
 }))
 

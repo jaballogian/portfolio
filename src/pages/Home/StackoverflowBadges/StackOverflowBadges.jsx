@@ -1,5 +1,8 @@
 import React from 'react'
 
+// CUSTOM COMPONENTS
+import CustomTooltipColorCultured from '../../../components/Customs/CustomTooltipColorCultured'
+
 // CONSTANTS
 import colors from 'constants/colors'
 
@@ -34,31 +37,46 @@ const StackOverflowBadges = () => {
   }
 
   return (
-    <div
-      className={classes.stackoverflowBadgesRoot}
-      onClick={() => onRootIsClicked()}
-    >
-      {badgesList.map((item, index) => (
-        <div 
-          key={index}
-          className={classes.badgesItemContainer}
+    <CustomTooltipColorCultured
+      placement={'left'}
+      title={
+        <Typography
+          variant='subtitle1'
+          className={classes.text}
         >
-          {/* CIRCLE */}
+          2 Golds,<br/>
+          6 Silvers, and<br/>
+          19 Bonzes on<br/>
+          Stackoverflow
+        </Typography>
+      }
+    >
+      <div
+        className={classes.stackoverflowBadgesRoot}
+        onClick={() => onRootIsClicked()}
+      >
+        {badgesList.map((item, index) => (
           <div 
-            className={classes.circle}
-            style={{ backgroundColor: item.color }}
-          />
-
-          {/* TEXT */}
-          <Typography 
-            className={classes.text}
-            style={{ color: item.color }}
+            key={index}
+            className={classes.badgesItemContainer}
           >
-            {item.count}
-          </Typography>
-        </div>
-      ))}
-    </div>
+            {/* CIRCLE */}
+            <div 
+              className={classes.circle}
+              style={{ backgroundColor: item.color }}
+            />
+
+            {/* TEXT */}
+            <Typography 
+              className={classes.text}
+              style={{ color: item.color }}
+            >
+              {item.count}
+            </Typography>
+          </div>
+        ))}
+      </div>
+    </CustomTooltipColorCultured>
   )
 }
 
