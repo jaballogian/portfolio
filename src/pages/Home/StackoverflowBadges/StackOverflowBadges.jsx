@@ -26,9 +26,18 @@ const StackOverflowBadges = () => {
       color: colors.stackoverflowBronze,
     },
   ]
+  
+  const onRootIsClicked = () => {
+    const stackoverflowUrl = 'https://stackoverflow.com/users/8339172/jabal-logian'
+    const newWindow = window.open(stackoverflowUrl, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
 
   return (
-    <div className={classes.stackoverflowBadgesRoot}>
+    <div
+      className={classes.stackoverflowBadgesRoot}
+      onClick={() => onRootIsClicked()}
+    >
       {badgesList.map((item, index) => (
         <div 
           key={index}
