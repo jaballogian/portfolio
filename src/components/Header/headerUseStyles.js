@@ -7,7 +7,7 @@ import { makeStyles } from '@mui/styles'
 const useStyles = makeStyles((theme) => ({
   headerRoot: {
     display: 'flex',
-    position: 'absolute',
+    position: 'fixed',
     width: 'fit-content',
     zIndex: 1,
     top: 67,
