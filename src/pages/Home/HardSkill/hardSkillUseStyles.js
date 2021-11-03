@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.only('xs')]: {
       width: 300,
-      height: 520,
+      height: 480,
       margin: '20px auto',
     },
     [theme.breakpoints.only('sm')]: {
@@ -109,6 +109,12 @@ const useStyles = makeStyles((theme) => ({
     margin: '0px 40px 15px 40px',
     '&:first-child': {
       marginTop: 40,
+    },
+    [theme.breakpoints.only('xs')]: {
+      margin: '0px 20px 15px 20px',
+      '&:first-child': {
+        marginTop: 20,
+      },
     },
   },
 }))
