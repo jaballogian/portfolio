@@ -71,19 +71,19 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 650,
   },
   backgroundText: {
-    height: 152.5,
+    height: 155,
     textAlign: 'center',
     [theme.breakpoints.only('xs')]: {
-      height: 105,
+      height: 107.5,
     },
     [theme.breakpoints.only('sm')]: {
-      height: 140,
+      height: 142.5,
     },
     [theme.breakpoints.only('md')]: {
       height: 75,
     },
     [theme.breakpoints.only('lg')]: {
-      height: 82.5,
+      height: 85,
     },
     [theme.breakpoints.up('xl')]: {
       fontSize: 175,
