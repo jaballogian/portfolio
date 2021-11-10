@@ -12,7 +12,7 @@ import { makeStyles } from '@mui/styles'
 const useStyles = makeStyles((theme) => ({
   hardSkillRoot: {
     width: '100%',
-    minHeight: '100vh',
+    height: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -20,15 +20,20 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     [theme.breakpoints.only('xs')]: {
       padding: '50px 25px 75px 25px',
+      height: 'unset',
     },
     [theme.breakpoints.only('sm')]: {
       padding: 50,
+      height: 'unset',
     },
     [theme.breakpoints.only('md')]: {
       padding: 75,
+      height: 'unset',
+      minHeight: 750,
     },
     [theme.breakpoints.only('lg')]: {
       padding: '0px 75px',
+      minHeight: 750,
     },
   },
   itemContainer: {
