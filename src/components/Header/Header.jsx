@@ -27,7 +27,7 @@ const Header = (props) => {
     'HOME',
     'SKILLS',
     'PROJECTS',
-    'SERTIFICATES',
+    'CERTIFICATES',
   ]
 
   const sectionClassName = (inputItem) => {
