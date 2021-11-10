@@ -7,6 +7,12 @@ const useStyles = makeStyles((theme) => ({
     right: 50,
     bottom: 100,
     cursor: 'pointer',
+    [theme.breakpoints.only('sm')]: {
+      right: 30,
+    },
+    [theme.breakpoints.only('md')]: {
+      right: 30,
+    },
     [theme.breakpoints.only('lg')]: {
       right: 30,
     },

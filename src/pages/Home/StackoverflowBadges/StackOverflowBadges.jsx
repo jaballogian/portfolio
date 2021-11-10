@@ -21,7 +21,7 @@ const StackOverflowBadges = () => {
       color: colors.stackoverflowGold,
     },
     {
-      count: 6,
+      count: 7,
       color: colors.stackoverflowSilver,
     },
     {
