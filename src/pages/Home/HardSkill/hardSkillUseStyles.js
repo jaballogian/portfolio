@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '0px 100px',
     position: 'relative',
     [theme.breakpoints.only('xs')]: {
-      padding: '50px 25px',
+      padding: '50px 25px 75px 25px',
     },
     [theme.breakpoints.only('sm')]: {
       padding: 50,
