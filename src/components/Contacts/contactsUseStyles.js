@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       left: 25,
     },
+    [theme.breakpoints.only('lg')]: {
+      left: 40,
+    },
   },
   iconContainer: {
     marginBottom: 25,
