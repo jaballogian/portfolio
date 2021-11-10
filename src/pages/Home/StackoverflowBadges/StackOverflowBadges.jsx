@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+// CONTEXTS
+import { AllPagesContext } from 'contexts/AllPagesContext'
 
 // CUSTOM COMPONENTS
 import CustomTooltipColorCultured from '../../../components/Customs/CustomTooltipColorCultured'
@@ -13,6 +16,8 @@ import Typography from '@mui/material/Typography'
 import useStyles from './stackOverflowBadgesUseStyles'
 
 const StackOverflowBadges = () => {
+  const { breakpointType } = useContext(AllPagesContext)
+
   const classes = useStyles()
   
   const onRootIsClicked = () => {
@@ -21,9 +26,12 @@ const StackOverflowBadges = () => {
     if (newWindow) newWindow.opener = null
   }
 
+  let tooltipPlacement = 'left'
+  breakpointType === 'xs' && (tooltipPlacement = 'top')
+
   return (
     <CustomTooltipColorCultured
-      placement={'left'}
+      placement={tooltipPlacement}
       title={
         <Typography
           variant='subtitle1'
