@@ -7,6 +7,11 @@ const useStyles = makeStyles((theme) => ({
     right: 50,
     bottom: 100,
     cursor: 'pointer',
+    [theme.breakpoints.only('xs')]: {
+      right: 'unset',
+      display: 'flex',
+      bottom: 55,
+    },
     [theme.breakpoints.only('sm')]: {
       right: 30,
     },
@@ -23,6 +28,13 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 10,
     '&:last-child': {
       marginBottom: 0,
+    },
+    [theme.breakpoints.only('xs')]: {
+      marginBottom: 0,
+      marginRight: 20,
+      '&:last-child': {
+        marginRight: 0,
+      },
     },
   },
   circle: {
