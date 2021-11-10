@@ -28,7 +28,7 @@ Design file: https://www.figma.com/file/HSWte6aSwHdWCkRaD86S5P/Portfolio-(Curren
 
 ## Contacts, social medias, and more
 
-1. Email:
-2. Linked In:
-3. Instagram:
-4. Stackoverflow:
+1. Email: hello.jaballogian@gmail.com
+2. Linked In: https://www.instagram.com/jaballogian/
+3. Instagram: https://www.linkedin.com/in/jaballogian/
+4. Stackoverflow: https://stackoverflow.com/users/8339172/jabal-logian
