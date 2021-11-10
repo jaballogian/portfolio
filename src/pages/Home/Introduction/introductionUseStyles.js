@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
     },
+    [theme.breakpoints.up('md')]: {
+      minHeight: 700,
+    },
   },
   section: {
     width: '50%',
@@ -34,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.only('md')]: {
       paddingLeft: 75,
+    },
+    [theme.breakpoints.up('md')]: {
+      minHeight: 700,
     },
   },
   titleAndCaption: {
