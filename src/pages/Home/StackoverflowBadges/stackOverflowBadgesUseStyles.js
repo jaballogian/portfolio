@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
     right: 50,
     bottom: 100,
     cursor: 'pointer',
+    [theme.breakpoints.only('lg')]: {
+      right: 30,
+    },
   },
   badgesItemContainer: {
     display: 'flex',
