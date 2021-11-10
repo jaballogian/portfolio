@@ -3,8 +3,8 @@ import React from 'react'
 // CUSTOM COMPONENTS
 import CustomTooltipColorCultured from '../../../components/Customs/CustomTooltipColorCultured'
 
-// CONSTANTS
-import colors from 'constants/colors'
+// DATA
+import badgesList from './stackOverflowBadgesData'
 
 // MATERIAL UI CORES
 import Typography from '@mui/material/Typography'
@@ -14,21 +14,6 @@ import useStyles from './stackOverflowBadgesUseStyles'
 
 const StackOverflowBadges = () => {
   const classes = useStyles()
-
-  const badgesList = [
-    {
-      count: 2,
-      color: colors.stackoverflowGold,
-    },
-    {
-      count: 7,
-      color: colors.stackoverflowSilver,
-    },
-    {
-      count: 20,
-      color: colors.stackoverflowBronze,
-    },
-  ]
   
   const onRootIsClicked = () => {
     const stackoverflowUrl = 'https://stackoverflow.com/users/8339172/jabal-logian'
