@@ -1,29 +1,30 @@
 import React from 'react'
 
 // MATERIAL UI CORES
-import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
 // STYELS
-import styles from './rightContentUseStyles'
+import useStyles from './rightContentUseStyles'
 
 const RightContent = (props) => {
   const { content } = props
+
+  const classes = useStyles()
   
   const imageType = content.imageType
 
   let root, placeholder
   if(imageType === 'mobile') {
-    root = `${styles.root} ${styles.rootMobile}`
-    placeholder = styles.placeholderMobile
+    root = `${classes.root} ${classes.rootMobile}`
+    placeholder = classes.placeholderMobile
   }
   else if(imageType === 'desktop') {
-    root = `${styles.root} ${styles.rootDesktopOrOther}`
-    placeholder = styles.placeholderDesktopOrOther
+    root = `${classes.root} ${classes.rootDesktopOrOther}`
+    placeholder = classes.placeholderDesktopOrOther
   }
   else if(imageType === 'other') {
-    root = `${styles.root} ${styles.rootDesktopOrOther}`
-    placeholder = styles.placeholderDesktopOrOther
+    root = `${classes.root} ${classes.rootDesktopOrOther}`
+    placeholder = classes.placeholderDesktopOrOther
   }
 
   return (
@@ -31,23 +32,22 @@ const RightContent = (props) => {
       item 
       xs={12} lg={6}
     >
-      <Box sx={root}>
+      <div className={root}>
         {content.imageList.map((item, index) => (
-          <Box
-            component='img' 
+          <img 
             key={index}
             src={item} 
             alt='' 
-            sx={
+            className={
               index === 0 ?
               placeholder :
               (imageType === 'mobile' ?
-              `${placeholder} ${styles.secondPlaceholderPhone}` :
-              `${placeholder} ${styles.secondPlaceholderDesktop}`)
+              `${placeholder} ${classes.secondPlaceholderPhone}` :
+              `${placeholder} ${classes.secondPlaceholderDesktop}`)
             }
           />
         ))}
-      </Box>
+      </div>
     </Grid>
   )
 }

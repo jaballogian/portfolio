@@ -1,4 +1,7 @@
-const styles = {
+// MATERIAL UI STYLES
+import { makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     boxSizing: 'border-box',
@@ -131,6 +134,6 @@ const styles = {
   secondPlaceholderDesktop: {
     marginBottom: 0,
   },
-}
+}))
 
-export default styles
+export default useStyles
