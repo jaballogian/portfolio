@@ -1,19 +1,18 @@
 // CONSTANTS
 import colors from 'constants/colors'
 
-const styles = {
-  root: {
-    width: '100vw',
-    display: 'flex',
-    justifyContent: 'center',
-    boxSizing: 'border-box',
+// MATERIAL UI STYLES
+import { makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles((theme) => ({
+  customPaginationRoot: {
     '& .MuiPaginationItem-root': {
-      backgroundColor: colors['cultured'],
-      color: colors['slateGray'],
+      backgroundColor: colors.cultured,
+      color: colors.slateGray,
       borderRadius: '50%',
       '&:hover': {
-        backgroundColor: colors['slateGray'],
-        color: colors['cultured'],
+        backgroundColor: colors.slateGray,
+        color: colors.cultured,
       },
       // [theme.breakpoints.down('xs')]: {
       //   height: 30,
@@ -35,10 +34,10 @@ const styles = {
       // },
     },
     '& .Mui-selected': {
-      backgroundColor: colors['orangeYellowCrayota'],
+      backgroundColor: colors.orangeYellowCrayota,
       color: 'black',
       '&:hover': {
-        backgroundColor: colors['orangeYellowCrayota'],
+        backgroundColor: colors.orangeYellowCrayota,
         color: 'black',
       },
     },
@@ -61,6 +60,6 @@ const styles = {
       // },
     },
   },
-}
+}))
 
-export default styles
+export default useStyles
