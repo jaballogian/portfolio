@@ -1,15 +1,15 @@
 import React from 'react'
 
 // COMPONENTS
-import TopContent from './TopContent/TopContent'
-import BottomContent from './BottomContent/BottomContent'
+import TopContent from './TopContent'
+import BottomContent from './BottomContent'
 
 // MATERIAL UI CORES
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
 // STYLES
-import styles from './leftContentStyles'
+import styles from './leftContentUseStyles'
 
 const LeftContent = (props) => {
   const { content } = props
