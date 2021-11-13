@@ -5,9 +5,10 @@ const useStyles = makeStyles((theme) => ({
   projectsRoot: {
     flexGrow: 1,
     width: '100%',
-    boxSizing: 'border-box',
+    height: '100vh',
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     position: 'relative',
     // [theme.breakpoints.down('xs')]: {
     //   // height: '125vh',
@@ -25,17 +26,6 @@ const useStyles = makeStyles((theme) => ({
     //   height: '100vh',
     //   minHeight: 800,
     // },
-  },
-  rootAnimation: {
-    animation: '$fadeIn 0.5s ease-in-out',
-  },
-  '@keyframes fadeIn': {
-    '0%': {
-      opacity: 0,
-    },
-    '100%': {
-      opacity: 1
-    },
   },
   paginationContainer: {
     display: 'flex',
