@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
 // COMPONENTS (SORTED BY ORDER)
-import LeftContent from './LeftContent/LeftContent'
-import RightContent from './RightContent/RightContent'
+import LeftContent from './LeftContent'
+import RightContent from './RightContent'
 import CustomPagination from 'components/CustomPagination/CustomPagination'
 
 // DATA
@@ -13,7 +13,7 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
 // STYLES
-import styles from './projectStyles'
+import styles from './projectUseStyles'
 
 const Projects = () => {
   const [ currentPage, setCurrentPage ] = useState(1)
