@@ -20,7 +20,7 @@ Browser testing screen resolutions (of Window screen resolutions) (width x heigh
 1. ASUS VivoBook 14 (laptop): 1920px x 905px (of 1920px x 1080px)
 2. Macbook Pro 13 inch (laptop): 1440px x 756px (of 2560px x 1600px)
 3. Macbook Pro 2017 (laptop: 1440px x 711px (of 1440px x 900px)
-3. Common laptop: 1366px x 768px (of 1366px x 657px)
+3. Common laptop: 1366px x 657px (of 1366px x 768px)
 4. Small laptop: ...px x ...px (of 1200px x 600px)
 5. Samsung Galaxy S6 Lite (tablet): 686px x 1008px
 6. Realme 6 (smartphone): 360px x 662px
