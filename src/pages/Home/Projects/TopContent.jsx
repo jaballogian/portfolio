@@ -5,7 +5,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
 // STYLES
-import styles from './topContentStyles'
+import styles from './topContentUseStyles'
 
 const TopContent = (props) => {
   const { content } = props
