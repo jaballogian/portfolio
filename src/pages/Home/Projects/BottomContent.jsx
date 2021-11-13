@@ -7,7 +7,7 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
 // STYLES
-import styles from './bottomContentStyles'
+import styles from './bottomContentUseStyles'
 
 const BottomContent = (props) => {
   const { content } = props
