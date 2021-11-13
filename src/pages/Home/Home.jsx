@@ -4,7 +4,7 @@ import React from 'react'
 import HeaderContactsController from './HeaderContactsController/HeaderContactsController'
 import Introduction from './Introduction/Introduction'
 import HardSkill from './HardSkill/HardSkill'
-// import Projects from './Projects/Projects'
+import Projects from './Projects/Projects'
 import Footer from 'components/Footer/Footer'
 
 // STYLES
@@ -18,7 +18,7 @@ const Home = () => {
       <HeaderContactsController/>
       <Introduction/>
       <HardSkill/>
-      {/* <Projects/> */}
+      <Projects/>
       <Footer/>
     </div>
   )
