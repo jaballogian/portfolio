@@ -34,13 +34,14 @@ const Projects = () => {
         <ContentLeft content={projectsData[currentPage - 1]}/>
         <ContentRight content={projectsData[currentPage - 1]}/>
       </Grid>
-      <div className={classes.paginationContainer}>
-        <CustomPagination 
-          pageCount={projectsData.length}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-        />
-      </div>
+
+      {/* PAGINATION */}
+      <CustomPagination 
+        className={classes.paginationContainer}
+        pageCount={projectsData.length}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
     </div>
   )
 }
