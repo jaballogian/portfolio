@@ -5,7 +5,7 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
 // STYELS
-import styles from './rightContentStyles'
+import styles from './rightContentUseStyles'
 
 const RightContent = (props) => {
   const { content } = props
