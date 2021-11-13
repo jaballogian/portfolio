@@ -25,7 +25,7 @@ const Projects = () => {
   }, [currentPage])
 
   return (
-    <div className={classes.root}>
+    <div className={classes.projectsRoot}>
       <Grid 
         container 
         className={isFade ? classes.rootAnimation : ''}
