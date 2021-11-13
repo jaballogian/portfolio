@@ -1,5 +1,8 @@
-const styles = {
-  root: {
+// MATERIAL UI STYLES
+import { makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles((theme) => ({
+  leftContentRoot: {
     width: '100%',
     boxSizing: 'border-box',
     // [theme.breakpoints.down('xs')]: {
@@ -21,6 +24,6 @@ const styles = {
     //   paddingRight: 50,
     // },
   },
-}
+}))
 
-export default styles
+export default useStyles
