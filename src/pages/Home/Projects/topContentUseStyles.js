@@ -1,7 +1,10 @@
 // CONSTANTS
 import colors from 'constants/colors'
 
-const styles = {
+// MATERIAL UI STYLES
+import { makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles((theme) => ({
   topContainer: {
     display: 'flex',
     flexDirection: 'column',
@@ -111,6 +114,6 @@ const styles = {
     //   marginBottom: 40,
     // },
   },
-}
+}))
 
-export default styles
+export default useStyles

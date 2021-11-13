@@ -1,50 +1,51 @@
 import React from 'react'
 
 // MATERIAL UI CORES
-import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
 // STYLES
-import styles from './topContentUseStyles'
+import useStyles from './topContentUseStyles'
 
 const TopContent = (props) => {
   const { content } = props
 
+  const classes = useStyles()
+
   return (
-    <Box sx={styles.topContainer}>
+    <div className={classes.topContainer}>
       {/* TITLE */}
       <Typography
         variant='h2'
-        sx={styles.title}
+        className={classes.title}
       >
         {content.title}
       </Typography>
 
       {/* TYPE */}
-      <Box sx={styles.typeContainer}>
+      <div className={classes.typeContainer}>
         {content.type.map((item, index) => (
-          <Box 
+          <div 
             key={index}
-            sx={styles.typeItem}
+            className={classes.typeItem}
           >
             <Typography
               variant='h4'
-              sx={styles.typeText}
+              className={classes.typeText}
             >
               {item}
             </Typography>
-          </Box>
+          </div>
         ))}
-      </Box>
+      </div>
 
       {/* TECHNOLOGIES */}
       <Typography
         variant='h4'
-        sx={styles.technologies}
+        className={classes.technologies}
       >
         {`Technologies: ${content.technologies}`}
       </Typography>
-    </Box>
+    </div>
   )
 }
 
