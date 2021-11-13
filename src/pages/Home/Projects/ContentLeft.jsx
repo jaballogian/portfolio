@@ -7,9 +7,9 @@ import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 
 // STYLES
-import useStyles from './leftContentUseStyles'
+import useStyles from './contentLeftUseStyles'
 
-const LeftContent = (props) => {
+const ContentLeft = (props) => {
   const { content } = props
 
   const classes = useStyles()
@@ -19,7 +19,7 @@ const LeftContent = (props) => {
       item 
       xs={12} lg={6}
     >
-      <div className={classes.leftContentRoot}>
+      <div className={classes.contentLeftRoot}>
         <div className={classes.topContainer}>
           {/* TITLE */}
           <Typography
@@ -87,4 +87,4 @@ const LeftContent = (props) => {
   )
 }
 
-export default LeftContent
+export default ContentLeft

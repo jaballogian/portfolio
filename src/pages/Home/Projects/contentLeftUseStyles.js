@@ -5,7 +5,7 @@ import colors from 'constants/colors'
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
-  leftContentRoot: {
+  contentLeftRoot: {
     width: '100%',
     boxSizing: 'border-box',
     // [theme.breakpoints.down('xs')]: {
