@@ -1,5 +1,8 @@
-const styles = {
-  root: {
+// MATERIAL UI STYLES
+import { makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles((theme) => ({
+  projectsRoot: {
     flexGrow: 1,
     width: '100%',
     boxSizing: 'border-box',
@@ -43,6 +46,6 @@ const styles = {
     bottom: 25,
     zIndex: 1,
   },
-}
+}))
 
-export default styles
+export default useStyles
