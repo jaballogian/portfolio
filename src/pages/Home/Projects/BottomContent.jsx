@@ -2,22 +2,23 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // MATERIAL UI CORES
-import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
 // STYLES
-import styles from './bottomContentUseStyles'
+import useStyles from './bottomContentUseStyles'
 
 const BottomContent = (props) => {
   const { content } = props
 
+  const classes = useStyles()
+
   return (
-    <Box sx={styles.bottomContainer}>
+    <div className={classes.bottomContentRoot}>
       {/* DESCRIPTION */}
       <Typography
         variant='h4'
-        sx={styles.description}
+        className={classes.description}
       >
         {content.description}
       </Typography>
@@ -25,21 +26,21 @@ const BottomContent = (props) => {
       {/* EXPLORE MORE */}
       <Link 
         to={content.link}
-        sx={styles.linkText}
+        className={classes.linkText}
       >
         <Button 
-          sx={styles.exploreMoreContainer} 
+          className={classes.exploreMoreContainer} 
           variant='contained'
         >
           <Typography
             variant='h4'
-            sx={styles.exploreMoreText}
+            className={classes.exploreMoreText}
           >
             Explore more
           </Typography>
         </Button>
       </Link>
-    </Box>
+    </div>
   )
 }
 

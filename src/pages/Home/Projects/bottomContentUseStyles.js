@@ -1,8 +1,11 @@
 // CONSTANTS
 import colors from 'constants/colors'
 
-const styles = {
-  bottomContainer: {
+// MATERIAL UI STYLES
+import { makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles((theme) => ({
+  bottomContentRoot: {
     // [theme.breakpoints.down('xs')]: {
     //   // height: '37.5vh',
     //   minHeight: 300,
@@ -67,6 +70,6 @@ const styles = {
   exploreMoreText: {
     color: 'white',
   },
-}
+}))
 
-export default styles
+export default useStyles
