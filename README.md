@@ -16,13 +16,15 @@ Built using [React Js](https://reactjs.org/) and [Material UI](https://mui.com/)
 
 Design file: https://www.figma.com/file/HSWte6aSwHdWCkRaD86S5P/Portfolio-(Current)
 
-Browser testing screen sizes (width x height):
-1. ASUS VivoBook 14 (laptop): 1920px x 905px
-2. Common laptop: 1366px x 768px
-3. Small laptop: 1200px x 600px
-4. Samsung Galaxy S6 Lite (tablet): 686px x 1008px
-5. Realme 6 (smartphone): 360px x 662px
-6. Current smallest smartphone: 350px x 600px
+Browser testing screen resolutions (of Window screen resolutions) (width x height):
+1. ASUS VivoBook 14 (laptop): 1920px x 905px (of 1920px x 1080px)
+2. Macbook Pro 13 inch (laptop): 1440px x 756px (of 2560px x 1600px)
+3. Macbook Pro 2017 (laptop: 1440px x 711px (of 1440px x 900px)
+3. Common laptop: 1366px x 768px (of 1366px x 657px)
+4. Small laptop: ...px x ...px (of 1200px x 600px)
+5. Samsung Galaxy S6 Lite (tablet): 686px x 1008px
+6. Realme 6 (smartphone): 360px x 662px
+7. Smallest (target) smartphone: 350px x 600px
 
 ## Credits
 
