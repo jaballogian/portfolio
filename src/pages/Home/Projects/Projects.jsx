@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
 // COMPONENTS (SORTED BY ORDER)
-import LeftContent from './LeftContent'
-import RightContent from './RightContent'
+import ContentLeft from './ContentLeft'
+import ContentRight from './ContentRight'
 import CustomPagination from 'components/CustomPagination/CustomPagination'
 
 // DATA
@@ -31,8 +31,8 @@ const Projects = () => {
         className={isFade ? classes.rootAnimation : ''}
         onAnimationEnd={() => setIsFade(false)}
       >
-        <LeftContent content={projectsData[currentPage - 1]}/>
-        <RightContent content={projectsData[currentPage - 1]}/>
+        <ContentLeft content={projectsData[currentPage - 1]}/>
+        <ContentRight content={projectsData[currentPage - 1]}/>
       </Grid>
       <div className={classes.paginationContainer}>
         <CustomPagination 
