@@ -4,9 +4,9 @@ import React from 'react'
 import Grid from '@mui/material/Grid'
 
 // STYELS
-import useStyles from './rightContentUseStyles'
+import useStyles from './contentRightUseStyles'
 
-const RightContent = (props) => {
+const ContentRight = (props) => {
   const { content } = props
 
   const classes = useStyles()
@@ -15,15 +15,15 @@ const RightContent = (props) => {
 
   let root, placeholder
   if(imageType === 'mobile') {
-    root = `${classes.root} ${classes.rootMobile}`
+    root = `${classes.contentRightRoot} ${classes.rootMobile}`
     placeholder = classes.placeholderMobile
   }
   else if(imageType === 'desktop') {
-    root = `${classes.root} ${classes.rootDesktopOrOther}`
+    root = `${classes.contentRightRoot} ${classes.rootDesktopOrOther}`
     placeholder = classes.placeholderDesktopOrOther
   }
   else if(imageType === 'other') {
-    root = `${classes.root} ${classes.rootDesktopOrOther}`
+    root = `${classes.contentRightRoot} ${classes.rootDesktopOrOther}`
     placeholder = classes.placeholderDesktopOrOther
   }
 
@@ -52,4 +52,4 @@ const RightContent = (props) => {
   )
 }
 
-export default RightContent
+export default ContentRight

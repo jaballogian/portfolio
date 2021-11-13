@@ -2,7 +2,7 @@
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  contentRightRoot: {
     width: '100%',
     boxSizing: 'border-box',
     // [theme.breakpoints.down('xs')]: {
