@@ -6,31 +6,17 @@ import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
   contentLeftRoot: {
-    width: '100%',
-    boxSizing: 'border-box',
-    // [theme.breakpoints.down('xs')]: {
-    //   // height: '75vh',
-    //   minHeight: 600,
-    // },
-    // [theme.breakpoints.only('sm')]: {
-    //   // height: '75vh',
-    //   minHeight: 600,
-    // },
-    // [theme.breakpoints.only('md')]: {
-    //   // height: '75vh',
-    //   minHeight: 600,
-    // },
-    // [theme.breakpoints.only('lg')]: {
-    //   paddingRight: 40,
-    // },
-    // [theme.breakpoints.up('xl')]: {
-    //   paddingRight: 50,
-    // },
-  },
-  topContainer: {
+    width: '50vw',
+    backgroundColor: 'whitesmoke',
+    height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
+    paddingLeft: 100,
+    paddingRight: 25,
+  },
+  contentLeftContainer: {
+    backgroundColor: 'gainsboro',
     // [theme.breakpoints.down('xs')]: {
     //   // height: '37.5vh',
     //   minHeight: 300,
@@ -51,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     // },
   },
   title: {
+    marginBottom: 25,
     // [theme.breakpoints.down('sm')]: {
     //   marginBottom: 16,
     // },
@@ -85,6 +72,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    marginRight: 10,
+    marginBottom: 25,
+    width: 175,
+    height: 40,
     // [theme.breakpoints.down('xs')]: {
     //   marginRight: 10,
     //   width: 150,
@@ -116,6 +107,7 @@ const useStyles = makeStyles((theme) => ({
   },
   technologies: {
     color: colors['slateGray'],
+    marginBottom: 50,
     // [theme.breakpoints.down('xs')]: {
     //   height: 90,
     //   marginBottom: 16,
@@ -136,28 +128,10 @@ const useStyles = makeStyles((theme) => ({
     //   marginBottom: 40,
     // },
   },
-  bottomContentRoot: {
-    // [theme.breakpoints.down('xs')]: {
-    //   // height: '37.5vh',
-    //   minHeight: 300,
-    // },
-    // [theme.breakpoints.only('sm')]: {
-    //   // height: '37.5vh',
-    //   minHeight: 300,
-    // },
-    // [theme.breakpoints.only('md')]: {
-    //   // height: '37.5vh',
-    //   minHeight: 300,
-    // },
-    // [theme.breakpoints.only('lg')]: {
-    //   height: '50vh',
-    // },
-    // [theme.breakpoints.up('xl')]: {
-    //   height: '50vh',
-    // },
-  },
   description: {
     colors: 'black',
+    height: 175,
+    marginBottom: 50,
     // [theme.breakpoints.down('sm')]: {
     //   marginBottom: 16,
     //   height: 200,
@@ -182,6 +156,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: colors['paradisePink'],
     textTransform: 'none',
     borderRadius: 10,
+    height: 45,
+    width: 200,
     '&:hover': {
       backgroundColor: colors['redCrayola'],
     },
