@@ -1,8 +1,5 @@
 import React from 'react'
 
-// MATERIAL UI CORES
-import Grid from '@mui/material/Grid'
-
 // STYELS
 import useStyles from './contentRightUseStyles'
 
@@ -13,42 +10,33 @@ const ContentRight = (props) => {
   
   const imageType = content.imageType
 
-  let root, placeholder
+  let placeholderRoot, placeholder
   if(imageType === 'mobile') {
-    root = `${classes.contentRightRoot} ${classes.rootMobile}`
+    placeholderRoot = classes.rootMobile
     placeholder = classes.placeholderMobile
   }
   else if(imageType === 'desktop') {
-    root = `${classes.contentRightRoot} ${classes.rootDesktopOrOther}`
+    placeholderRoot = classes.rootDesktopOrOther
     placeholder = classes.placeholderDesktopOrOther
   }
   else if(imageType === 'other') {
-    root = `${classes.contentRightRoot} ${classes.rootDesktopOrOther}`
+    placeholderRoot = classes.rootDesktopOrOther
     placeholder = classes.placeholderDesktopOrOther
   }
 
   return (
-    <Grid 
-      item 
-      xs={12} lg={6}
-    >
-      <div className={root}>
-        {content.imageList.map((item, index) => (
+    <div className={classes.contentRightRoot}>
+      <div className={placeholderRoot}>
+        {/* {content.imageList.map((item, index) => (
           <img 
             key={index}
             src={item} 
             alt='' 
-            className={
-              index === 0 ?
-              placeholder :
-              (imageType === 'mobile' ?
-              `${placeholder} ${classes.secondPlaceholderPhone}` :
-              `${placeholder} ${classes.secondPlaceholderDesktop}`)
-            }
+            className={placeholder}
           />
-        ))}
+        ))} */}
       </div>
-    </Grid>
+    </div>
   )
 }
 

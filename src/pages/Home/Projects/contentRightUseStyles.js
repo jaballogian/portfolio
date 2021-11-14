@@ -3,8 +3,13 @@ import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
   contentRightRoot: {
-    width: '100%',
-    boxSizing: 'border-box',
+    width: '50vw',
+    backgroundColor: 'gainsboro',
+    height: '100%',
+    padding: '100px 100px 100px 25px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
     // [theme.breakpoints.down('xs')]: {
     //   // height: '50vh',
     //   minHeight: 400,
