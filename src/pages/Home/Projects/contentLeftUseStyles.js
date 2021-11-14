@@ -7,7 +7,6 @@ import { makeStyles } from '@mui/styles'
 const useStyles = makeStyles((theme) => ({
   contentLeftRoot: {
     width: '50vw',
-    backgroundColor: 'whitesmoke',
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
@@ -28,12 +27,8 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.only('md')]: {
       height: '100vh',
-      minHeight: 875,
-      paddingBottom: 75,
+      minHeight: 750,
     },
-  },
-  contentLeftContainer: {
-    backgroundColor: 'gainsboro',
   },
   title: {
     marginBottom: 25,
@@ -92,8 +87,14 @@ const useStyles = makeStyles((theme) => ({
     colors: 'black',
     marginBottom: 40,
     height: 175,
+    [theme.breakpoints.only('xs')]: {
+      height: 250,
+    },
     [theme.breakpoints.only('md')]: {
-      height: 300,
+      height: 275,
+    },
+    [theme.breakpoints.only('lg')]: {
+      height: 200,
     },
   },
   linkText: {

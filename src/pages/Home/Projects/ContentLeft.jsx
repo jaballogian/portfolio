@@ -15,62 +15,60 @@ const ContentLeft = (props) => {
 
   return (
     <div className={classes.contentLeftRoot}>
-      <div className={classes.contentLeftContainer}>
-        {/* TITLE */}
-        <Typography
-          variant='h3'
-          className={classes.title}
-        >
-          {content.title}
-        </Typography>
+      {/* TITLE */}
+      <Typography
+        variant='h3'
+        className={classes.title}
+      >
+        {content.title}
+      </Typography>
 
-        {/* TYPE */}
-        <div className={classes.typeContainer}>
-          {content.type.map((item, index) => (
-            <Typography
-              key={index}
-              variant='h5'
-              className={classes.typeItem}
-            >
-              {item}
-            </Typography>
-          ))}
-        </div>
-
-        {/* TECHNOLOGIES */}
-        <Typography
-          variant='h5'
-          className={classes.technologies}
-        >
-          {`Technologies: ${content.technologies}`}
-        </Typography>
-      
-        {/* DESCRIPTION */}
-        <Typography
-          variant='h5'
-          className={classes.description}
-        >
-          {content.description}
-        </Typography>
-        
-        {/* EXPLORE MORE */}
-        <Link 
-          to={content.link}
-          className={classes.linkText}
-        >
-          <Button 
-            className={classes.exploreMoreContainer} 
-            variant='contained'
+      {/* TYPE */}
+      <div className={classes.typeContainer}>
+        {content.type.map((item, index) => (
+          <Typography
+            key={index}
+            variant='h5'
+            className={classes.typeItem}
           >
-            <Typography
-              variant='h5'
-              className={classes.exploreMoreText}
-            >
-              Explore more
-            </Typography>
-          </Button>
-        </Link>
+            {item}
+          </Typography>
+        ))}
       </div>
+
+      {/* TECHNOLOGIES */}
+      <Typography
+        variant='h5'
+        className={classes.technologies}
+      >
+        {`Technologies: ${content.technologies}`}
+      </Typography>
+    
+      {/* DESCRIPTION */}
+      <Typography
+        variant='h5'
+        className={classes.description}
+      >
+        {content.description}
+      </Typography>
+      
+      {/* EXPLORE MORE */}
+      <Link 
+        to={content.link}
+        className={classes.linkText}
+      >
+        <Button 
+          className={classes.exploreMoreContainer} 
+          variant='contained'
+        >
+          <Typography
+            variant='h5'
+            className={classes.exploreMoreText}
+          >
+            Explore more
+          </Typography>
+        </Button>
+      </Link>
     </div>
   )
 }
