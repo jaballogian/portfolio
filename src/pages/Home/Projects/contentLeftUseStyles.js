@@ -27,10 +27,9 @@ const useStyles = makeStyles((theme) => ({
       padding: '50px 75px',
     },
     [theme.breakpoints.only('md')]: {
-      width: '100%',
       height: '100vh',
-      minHeight: 750,
-      padding: 75,
+      minHeight: 875,
+      paddingBottom: 75,
     },
   },
   contentLeftContainer: {
@@ -93,6 +92,9 @@ const useStyles = makeStyles((theme) => ({
     colors: 'black',
     marginBottom: 40,
     height: 175,
+    [theme.breakpoints.only('md')]: {
+      height: 300,
+    },
   },
   linkText: {
     textDecoration: 'none',
