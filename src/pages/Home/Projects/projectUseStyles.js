@@ -35,6 +35,25 @@ const useStyles = makeStyles((theme) => ({
     bottom: 100,
     zIndex: 1,
   },
+  backgroundText: {
+    height: 155,
+    textAlign: 'center',
+    [theme.breakpoints.only('xs')]: {
+      height: 107.5,
+    },
+    [theme.breakpoints.only('sm')]: {
+      height: 67.5,
+    },
+    [theme.breakpoints.only('md')]: {
+      height: 75,
+    },
+    [theme.breakpoints.only('lg')]: {
+      height: 85,
+    },
+    [theme.breakpoints.up('xl')]: {
+      fontSize: 175,
+    },
+  },
 }))
 
 export default useStyles

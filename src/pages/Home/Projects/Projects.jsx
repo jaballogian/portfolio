@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 
-// COMPONENTS (SORTED BY ORDER)
+// COMPONENTS
 import ContentLeft from './ContentLeft'
 import ContentRight from './ContentRight'
 import CustomPagination from 'components/CustomPagination/CustomPagination'
+import BackgroundText from 'components/BackgroundText/BackgroundText'
+
+// CONTEXTS
+import { AllPagesContext } from 'contexts/AllPagesContext'
 
 // DATA
 import projectsData from './projectsData'
@@ -12,6 +16,8 @@ import projectsData from './projectsData'
 import useStyles from './projectUseStyles'
 
 const Projects = () => {
+  const { breakpointType } = useContext(AllPagesContext)
+  
   const classes = useStyles()
 
   const [ currentPage, setCurrentPage ] = useState(1)
@@ -27,6 +33,14 @@ const Projects = () => {
         pageCount={projectsData.length}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
+      />
+
+      {/* BACKGROUND TEXT */}
+      <BackgroundText
+        text='PUBLIC PROJECTS'
+        className={classes.backgroundText}
+        noWrap={breakpointType === 'xs' ? false : true}
+        textVariant='h1'
       />
     </div>
   )
