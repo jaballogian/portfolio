@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
       height: 'unset',
     },
     [theme.breakpoints.only('md')]: {
-      flexDirection: 'column',
       height: 'unset',
+      minHeight: 875,
     },
     [theme.breakpoints.only('lg')]: {
       minHeight: 750,
