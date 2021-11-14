@@ -10,25 +10,21 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
-    // [theme.breakpoints.down('xs')]: {
-    //   flexDirection: 'column',
-    //   // height: '125vh',
-    //   minHeight: 1200,
-    // },
-    // [theme.breakpoints.only('sm')]: {
-    //   flexDirection: 'column',
-    //   // height: '125vh',
-    //   minHeight: 1200,
-    // },
-    // [theme.breakpoints.only('md')]: {
-    //   flexDirection: 'column',
-    //   // height: '150vh',
-    //   minHeight: 1200,
-    // },
-    // [theme.breakpoints.up('lg')]: {
-    //   height: '100vh',
-    //   minHeight: 800,
-    // },
+    [theme.breakpoints.only('xs')]: {
+      flexDirection: 'column',
+      height: 'unset',
+    },
+    [theme.breakpoints.only('sm')]: {
+      flexDirection: 'column',
+      height: 'unset',
+    },
+    [theme.breakpoints.only('md')]: {
+      flexDirection: 'column',
+      height: 'unset',
+    },
+    [theme.breakpoints.only('lg')]: {
+      minHeight: 750,
+    },
   },
   paginationContainer: {
     display: 'flex',
