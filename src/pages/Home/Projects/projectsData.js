@@ -11,12 +11,11 @@ const projectsData = [
       'IoT Device',
     ],
     technologies: 'Android Studio, Arudino IDE, Firebase',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     link: '/project/1',
     // RIGHT CONTENT
     imageType: 'mobile',
     imageList: [
-      BackgroundIphone,
       BackgroundIphone,
       BackgroundIphone,
     ],
@@ -29,7 +28,7 @@ const projectsData = [
       'IoT Device',
     ],
     technologies: 'Android Studio, Arudino IDE, Firebase',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     link: '/project/2',
     // RIGHT CONTENT
     imageType: 'desktop',
@@ -45,7 +44,7 @@ const projectsData = [
       'IoT Device',
     ],
     technologies: 'Android Studio, Arudino IDE, Firebase',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     link: '/project/3',
     // RIGHT CONTENT
     imageType: 'other',
