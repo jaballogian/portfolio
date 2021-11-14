@@ -27,14 +27,14 @@ const ContentRight = (props) => {
   return (
     <div className={classes.contentRightRoot}>
       <div className={placeholderRoot}>
-        {/* {content.imageList.map((item, index) => (
+        {content.imageList.map((item, index) => (
           <img 
             key={index}
             src={item} 
             alt='' 
             className={placeholder}
           />
-        ))} */}
+        ))}
       </div>
     </div>
   )
