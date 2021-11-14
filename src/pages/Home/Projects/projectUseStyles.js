@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.only('md')]: {
       height: 'unset',
-      minHeight: 875,
+      minHeight: 850,
     },
     [theme.breakpoints.only('lg')]: {
       minHeight: 750,
@@ -34,6 +34,15 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translate(-50%, 0px)',
     bottom: 100,
     zIndex: 1,
+    [theme.breakpoints.only('sm')]: {
+      bottom: 60,
+    },
+    [theme.breakpoints.only('md')]: {
+      bottom: 60,
+    },
+    [theme.breakpoints.only('lg')]: {      
+      bottom: 75,
+    },
   },
   backgroundText: {
     height: 155,
