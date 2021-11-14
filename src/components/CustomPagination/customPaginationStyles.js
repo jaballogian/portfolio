@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     '& .MuiPaginationItem-root': {
+      margin: '0px 5px',
       backgroundColor: colors.cultured,
       color: colors.slateGray,
       borderRadius: '50%',
@@ -21,19 +22,16 @@ const useStyles = makeStyles((theme) => ({
         height: 30,
         width: 30,
         fontSize: 20,
-        margin: '0px 7.5px',
       },
       [theme.breakpoints.only('sm')]: {
         height: 40,
         width: 40,
         fontSize: 21,
-        margin: '0px 10px',
       },
       [theme.breakpoints.up('md')]: {
         height: 50,
         width: 50,
         fontSize: 24,
-        margin: '0px 10px',
       },
     },
     '& .Mui-selected': {
