@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.25)',
     transform: 'scale(1)',
     transition: 'transform 0.25s ease-in-out',
+    backgroundColor: 'white',
     '&:hover': {
       transform: 'scale(1.025)',
       transition: 'transform 0.25s ease-in-out',
