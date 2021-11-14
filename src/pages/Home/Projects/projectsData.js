@@ -17,7 +17,8 @@ const projectsData = [
     imageType: 'mobile',
     imageList: [
       BackgroundIphone,
-      BackgroundIphone
+      BackgroundIphone,
+      BackgroundIphone,
     ],
   },
   {
@@ -34,7 +35,7 @@ const projectsData = [
     imageType: 'desktop',
     imageList: [
       BackgroundMacbook,
-      BackgroundMacbook
+      BackgroundMacbook,
     ],
   },
   {
@@ -50,7 +51,7 @@ const projectsData = [
     imageType: 'other',
     imageList: [
       BackgroundMacbook,
-      BackgroundMacbook
+      BackgroundMacbook,
     ],
   },
 ]
