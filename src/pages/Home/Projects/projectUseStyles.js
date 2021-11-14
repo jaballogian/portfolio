@@ -11,14 +11,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     position: 'relative',
     // [theme.breakpoints.down('xs')]: {
+    //   flexDirection: 'column',
     //   // height: '125vh',
     //   minHeight: 1200,
     // },
     // [theme.breakpoints.only('sm')]: {
+    //   flexDirection: 'column',
     //   // height: '125vh',
     //   minHeight: 1200,
     // },
     // [theme.breakpoints.only('md')]: {
+    //   flexDirection: 'column',
     //   // height: '150vh',
     //   minHeight: 1200,
     // },
@@ -33,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     left: '50%',
     transform: 'translate(-50%, 0px)',
-    bottom: 25,
+    bottom: 100,
     zIndex: 1,
   },
 }))
