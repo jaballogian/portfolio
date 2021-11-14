@@ -37,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       paddingLeft: 75,
     },
+    [theme.breakpoints.only('lg')]: {
+      paddingLeft: 75,
+    },
     [theme.breakpoints.up('md')]: {
       minHeight: 700,
     },
@@ -68,6 +71,9 @@ const useStyles = makeStyles((theme) => ({
       paddingRight: 75,
     },
     [theme.breakpoints.only('md')]: {
+      paddingRight: 75,
+    },
+    [theme.breakpoints.only('lg')]: {
       paddingRight: 75,
     },
   },
