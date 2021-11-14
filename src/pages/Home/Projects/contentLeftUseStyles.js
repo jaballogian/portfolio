@@ -14,57 +14,46 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     paddingLeft: 100,
     paddingRight: 25,
+    [theme.breakpoints.only('xs')]: {
+      width: '100%',
+      height: '100vh',
+      minHeight: 600,
+      padding: 25,
+    },
+    [theme.breakpoints.only('sm')]: {
+      width: '100%',
+      height: '100vh',
+      minHeight: 750,
+      padding: '50px 75px',
+    },
+    [theme.breakpoints.only('md')]: {
+      width: '100%',
+      height: '100vh',
+      minHeight: 750,
+      padding: 75,
+    },
   },
   contentLeftContainer: {
     backgroundColor: 'gainsboro',
-    // [theme.breakpoints.down('xs')]: {
-    //   // height: '37.5vh',
-    //   minHeight: 300,
-    // },
-    // [theme.breakpoints.only('sm')]: {
-    //   // height: '37.5vh',
-    //   minHeight: 300,
-    // },
-    // [theme.breakpoints.only('md')]: {
-    //   // height: '37.5vh',
-    //   minHeight: 300,
-    // },
-    // [theme.breakpoints.only('lg')]: {
-    //   height: '50vh',
-    // },
-    // [theme.breakpoints.up('xl')]: {
-    //   height: '50vh',
-    // },
   },
   title: {
     marginBottom: 25,
-    // [theme.breakpoints.down('sm')]: {
-    //   marginBottom: 16,
-    // },
-    // [theme.breakpoints.only('md')]: {
-    //   marginBottom: 24,
-    // },
-    // [theme.breakpoints.only('lg')]: {
-    //   marginBottom: 32,
-    // },
-    // [theme.breakpoints.up('xl')]: {
-    //   marginBottom: 40,
-    // },
+    [theme.breakpoints.only('xs')]: {
+      marginBottom: 15,
+    },
+    [theme.breakpoints.only('sm')]: {
+      marginBottom: 15,
+    },
   },
   typeContainer: {
     display: 'flex',
-    // [theme.breakpoints.down('sm')]: {
-    //   marginBottom: 16,
-    // },
-    // [theme.breakpoints.only('md')]: {
-    //   marginBottom: 24,
-    // },
-    // [theme.breakpoints.only('lg')]: {
-    //   marginBottom: 32,
-    // },
-    // [theme.breakpoints.up('xl')]: {
-    //   marginBottom: 40,
-    // },
+    marginBottom: 25,
+    [theme.breakpoints.only('xs')]: {
+      marginBottom: 15,
+    },
+    [theme.breakpoints.only('sm')]: {
+      marginBottom: 15,
+    },
   },
   typeItem: {
     backgroundColor: colors['carribeanGreen'],
@@ -73,81 +62,37 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 10,
-    marginBottom: 25,
     width: 175,
     height: 40,
-    // [theme.breakpoints.down('xs')]: {
-    //   marginRight: 10,
-    //   width: 150,
-    //   height: 40,
-    // },
-    // [theme.breakpoints.only('sm')]: {
-    //   marginRight: 10,
-    //   width: 200,
-    //   height: 40,
-    // },
-    // [theme.breakpoints.only('md')]: {
-    //   marginRight: 15,
-    //   width: 225,
-    //   height: 50,
-    // },
-    // [theme.breakpoints.only('lg')]: {
-    //   marginRight: 20,
-    //   width: 225,
-    //   height: 50,
-    // },
-    // [theme.breakpoints.up('xl')]: {
-    //   marginRight: 25,
-    //   width: 225,
-    //   height: 50,
-    // },
-  },
-  typeText: {
     color: 'white',
+    '&:last-child': {
+      marginRight: 0,
+    },
   },
   technologies: {
     color: colors['slateGray'],
-    marginBottom: 50,
-    // [theme.breakpoints.down('xs')]: {
-    //   height: 90,
-    //   marginBottom: 16,
-    // },
-    // [theme.breakpoints.only('sm')]: {
-    //   height: 80,
-    //   marginBottom: 16,
-    // },
-    // [theme.breakpoints.only('md')]: {
-    //   marginBottom: 24,
-    // },
-    // [theme.breakpoints.only('lg')]: {
-    //   height: 80,
-    //   marginBottom: 32,
-    // },
-    // [theme.breakpoints.up('xl')]: {
-    //   height: 80,
-    //   marginBottom: 40,
-    // },
+    [theme.breakpoints.only('xs')]: {
+      height: 55,
+      marginBottom: 15,
+    },
+    [theme.breakpoints.only('sm')]: {
+      height: 55,
+      marginBottom: 15,
+    },
+    [theme.breakpoints.only('md')]: {
+      marginBottom: 20,
+    },
+    [theme.breakpoints.only('lg')]: {
+      marginBottom: 30,
+    },
+    [theme.breakpoints.only('xl')]: {
+      marginBottom: 40,
+    },
   },
   description: {
     colors: 'black',
+    marginBottom: 40,
     height: 175,
-    marginBottom: 50,
-    // [theme.breakpoints.down('sm')]: {
-    //   marginBottom: 16,
-    //   height: 200,
-    // },
-    // [theme.breakpoints.only('md')]: {
-    //   marginBottom: 24,
-    //   height: 160,
-    // },
-    // [theme.breakpoints.only('lg')]: {
-    //   marginBottom: 32,
-    //   height: 160,
-    // },
-    // [theme.breakpoints.up('xl')]: {
-    //   marginBottom: 40,
-    //   height: 160,
-    // },
   },
   linkText: {
     textDecoration: 'none',
@@ -161,18 +106,14 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: colors['redCrayola'],
     },
-    // [theme.breakpoints.down('xs')]: {
-    //   height: 45,
-    //   width: 200,
-    // },
-    // [theme.breakpoints.only('sm')]: {
-    //   height: 50,
-    //   width: 225,
-    // },
-    // [theme.breakpoints.up('md')]: {
-    //   height: 60,
-    //   width: 260,
-    // },
+    [theme.breakpoints.only('xs')]: {
+      height: 40,
+      width: 170,
+    },
+    [theme.breakpoints.only('sm')]: {
+      height: 45,
+      width: 180,
+    },
   },
   exploreMoreText: {
     color: 'white',
