@@ -5,6 +5,7 @@ import HeaderContactsController from './HeaderContactsController/HeaderContactsC
 import Introduction from './Introduction/Introduction'
 import HardSkill from './HardSkill/HardSkill'
 import Projects from './Projects/Projects'
+import Certificates from './Certificates/Certificates'
 import Footer from 'components/Footer/Footer'
 
 // STYLES
@@ -19,6 +20,7 @@ const Home = () => {
       <Introduction/>
       <HardSkill/>
       <Projects/>
+      <Certificates/>
       <Footer/>
     </div>
   )
