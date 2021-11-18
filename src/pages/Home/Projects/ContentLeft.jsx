@@ -25,7 +25,7 @@ const ContentLeft = (props) => {
 
       {/* TYPE */}
       <div className={classes.typeContainer}>
-        {content.type.map((item, index) => (
+        {content.typeList.map((item, index) => (
           <Typography
             key={index}
             variant='h5'
