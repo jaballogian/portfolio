@@ -34,22 +34,11 @@ const useStyles = makeStyles((theme) => ({
   },
   rootMobile: {
     height: '100%',
-    display: 'flex',
     position: 'relative',
   },
   rootDesktopOrOther: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    [theme.breakpoints.down('sm')]: {
-      justifyContent: 'center',
-    },
-    [theme.breakpoints.only('md')]: {
-      justifyContent: 'flex-start',
-    },
-    [theme.breakpoints.up('lg')]: {
-      justifyContent: 'center',
-    },
+    height: '100%',
+    position: 'relative',
   },
   placeholderMobile: {
     // W:H = 9:16
@@ -88,38 +77,34 @@ const useStyles = makeStyles((theme) => ({
   },
   placeholderDesktopOrOther: {
     // W:H = 16:9
+    top: 0,
+    position: 'absolute',
+    maxWidth: '100%',
     [theme.breakpoints.only('xs')]: {
       // ONE IS 18
       width: 288,
-      height: 162,
-      marginBottom: 20,
     },
     [theme.breakpoints.only('sm')]: {
       // ONE IS 22
       width: 352,
-      height: 198,
-      marginBottom: 20,
     },
     [theme.breakpoints.only('md')]: {
       // ONE IS 25
       width: 400,
-      height: 225,
-      marginBottom: 20,
     },
     [theme.breakpoints.only('lg')]: {
       // ONE IS 30
       width: 480,
-      height: 270,
-      marginBottom: 40,
     },
     [theme.breakpoints.only('xl')]: {
       // ONE IS 35
       width: 560,
-      height: 315,
-      marginBottom: 40,
     },
     '&:last-child': {
-      marginBottom: 0,
+      right: 0,
+      top: 'unset',
+      bottom: 0,
+      marginBottom: 'unset',
     },
   },
 }))
