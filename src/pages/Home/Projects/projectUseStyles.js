@@ -34,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translate(-50%, 0px)',
     bottom: 100,
     zIndex: 1,
+    [theme.breakpoints.only('xs')]: {
+      bottom: 20,
+    },
     [theme.breakpoints.only('sm')]: {
       bottom: 60,
     },
