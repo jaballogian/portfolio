@@ -1,7 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // STYELS
 import useStyles from './contentRightUseStyles'
+
+const imageTypeList = [
+  'mobile',
+  'desktop',
+  'other',
+]
 
 const ContentRight = (props) => {
   const { content } = props
@@ -38,6 +45,16 @@ const ContentRight = (props) => {
       </div>
     </div>
   )
+}
+
+ContentRight.defaultProps = {
+}
+
+ContentRight.propTypes = {
+  content: PropTypes.shape({
+    imageType: PropTypes.oneOf(imageTypeList).isRequired,
+    imageList: PropTypes.array.isRequired,
+  }).isRequired,
 }
 
 export default ContentRight
