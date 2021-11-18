@@ -7,7 +7,7 @@ const certificatesData = [
       'IoT Device',
     ],
     providers: 'Provider 1 & Provider 2',
-    descriptions: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     // RIGHT CONTENT
@@ -17,7 +17,7 @@ const certificatesData = [
       'IoT Device',
     ],
     providers: 'Provider 1',
-    descriptions: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     // RIGHT CONTENT
@@ -26,7 +26,7 @@ const certificatesData = [
       'IoT Device',
     ],
     providers: 'Provider 1 & Provider 2',
-    descriptions: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
 ]
 
