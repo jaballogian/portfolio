@@ -11,6 +11,15 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     position: 'relative',
   },
+  paginationContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    position: 'absolute',
+    left: '50%',
+    transform: 'translate(-50%, 0px)',
+    bottom: 100,
+    zIndex: 1,
+  },
 }))
 
 export default useStyles
