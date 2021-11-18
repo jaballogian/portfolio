@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   typeItem: {
-    backgroundColor: colors['carribeanGreen'],
+    backgroundColor: colors.carribeanGreen,
     borderRadius: 20,
     display: 'flex',
     justifyContent: 'center',
@@ -64,7 +64,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   technologies: {
-    color: colors['slateGray'],
+    color: colors.slateGray,
+    marginBottom: 40,
     [theme.breakpoints.only('xs')]: {
       height: 55,
       marginBottom: 15,
@@ -78,9 +79,6 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.only('lg')]: {
       marginBottom: 30,
-    },
-    [theme.breakpoints.only('xl')]: {
-      marginBottom: 40,
     },
   },
   description: {
@@ -101,13 +99,13 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
   },
   exploreMoreContainer: {
-    backgroundColor: colors['paradisePink'],
+    backgroundColor: colors.paradisePink,
     textTransform: 'none',
     borderRadius: 10,
     height: 45,
     width: 200,
     '&:hover': {
-      backgroundColor: colors['redCrayola'],
+      backgroundColor: colors.redCrayola,
     },
     [theme.breakpoints.only('xs')]: {
       height: 40,
