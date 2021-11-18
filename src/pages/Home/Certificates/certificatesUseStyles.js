@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
     bottom: 100,
     zIndex: 1,
   },
+  backgroundText: {
+    height: 155,
+    textAlign: 'center',
+  },
 }))
 
 export default useStyles
