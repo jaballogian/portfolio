@@ -12,16 +12,18 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('xs')]: {
       width: '100%',
       height: '100vh',
-      minHeight: 750,
-      padding: '0px 25px 0px 25px',
+      minHeight: 600,
+      padding: '50px 25px',
     },
     [theme.breakpoints.only('sm')]: {
       width: '100%',
       height: '100vh',
       minHeight: 750,
-      padding: '0px 75px 100px 75px',
+      padding: '75px 75px 100px 75px',
     },
     [theme.breakpoints.only('md')]: {
+      height: '100vh',
+      minHeight: 750,
       paddingRight: 75,
       paddingLeft: 50,
     },
@@ -31,24 +33,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   rootMobile: {
+    height: '100%',
     display: 'flex',
     position: 'relative',
-    [theme.breakpoints.only('xs')]: {
-      alignItems: 'center',
-    },
-    [theme.breakpoints.only('sm')]: {
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    [theme.breakpoints.only('md')]: {
-      alignItems: 'center',
-    },
-    [theme.breakpoints.only('lg')]: {
-      alignItems: 'center',
-    },
-    [theme.breakpoints.only('xl')]: {
-      alignItems: 'center',
-    },
   },
   rootDesktopOrOther: {
     display: 'flex',
@@ -66,49 +53,37 @@ const useStyles = makeStyles((theme) => ({
   },
   placeholderMobile: {
     // W:H = 9:16
+    top: 0,
+    position: 'absolute',
     [theme.breakpoints.only('xs')]: {
       // ONE IS 22
       width: 198,
       height: 352,
-      position: 'absolute',
     },
     [theme.breakpoints.only('sm')]: {
       // ONE IS 24
       width: 216,
       height: 384,
-      margin: '0px 20px',
     },
     [theme.breakpoints.only('md')]: {
       // ONE IS 28
       width: 252,
       height: 448,
-      position: 'absolute',
     },
     [theme.breakpoints.only('lg')]: {
       // ONE IS 32
       width: 288,
       height: 512,
-      position: 'absolute',
     },
     [theme.breakpoints.only('xl')]: {
       // ONE IS 36
       width: 324,
       height: 576,
-      position: 'absolute',
     },
     '&:last-child': {
-      [theme.breakpoints.only('xs')]: {
-        right: 0,
-      },
-      [theme.breakpoints.only('md')]: {
-        right: 0,
-      },
-      [theme.breakpoints.only('lg')]: {
-        right: 0,
-      },
-      [theme.breakpoints.only('xl')]: {
-        right: 0,
-      },
+      right: 0,
+      top: 'unset',
+      bottom: 0,
     },
   },
   placeholderDesktopOrOther: {
