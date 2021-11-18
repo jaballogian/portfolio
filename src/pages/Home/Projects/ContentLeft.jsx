@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 // MATERIAL UI CORES
 import Button from '@mui/material/Button'
@@ -71,6 +72,19 @@ const ContentLeft = (props) => {
       </Link>
     </div>
   )
+}
+
+ContentLeft.defaultProps = {
+}
+
+ContentLeft.propTypes = {
+  content: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    typeList: PropTypes.array.isRequired,
+    technologies: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default ContentLeft
