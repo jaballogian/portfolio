@@ -19,7 +19,7 @@ const Certificates = () => {
   return (
     <div className={classes.certificatesRoot}>
       <ContentLeft/>
-      <ContentRight/>
+      <ContentRight content={certificatesData[currentPage - 1]}/>
 
       {/* PAGINATION */}
       <CustomPagination 
