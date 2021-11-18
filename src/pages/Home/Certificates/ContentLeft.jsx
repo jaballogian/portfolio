@@ -3,12 +3,25 @@ import React from 'react'
 // STYLES
 import useStyles from './contentLeftUseStyles'
 
-const ContentLeft = () => {
+const ContentLeft = (props) => {
+  const { content } = props
+
   const classes = useStyles()
+
+  let placeholderRoot, placeholder
 
   return (
     <div className={classes.contentLeftRoot}>
-      Content Left
+      <div className={placeholderRoot}>
+        {content.imageList.map((item, index) => (
+          <img 
+            key={index}
+            src={item} 
+            alt='' 
+            className={placeholder}
+          />
+        ))}
+      </div>
     </div>
   )
 }
