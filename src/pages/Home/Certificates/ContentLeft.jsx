@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // STYLES
 import useStyles from './contentLeftUseStyles'
@@ -24,6 +25,15 @@ const ContentLeft = (props) => {
       </div>
     </div>
   )
+}
+
+ContentLeft.defaultProps = {
+}
+
+ContentLeft.propTypes = {
+  content: PropTypes.shape({
+    imageList: PropTypes.array.isRequired,
+  }).isRequired,
 }
 
 export default ContentLeft
