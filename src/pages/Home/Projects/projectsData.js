@@ -6,7 +6,7 @@ const projectsData = [
   {
     // LEFT CONTENT
     title: 'Project Title 1',
-    type: [
+    typeList: [
       'Mobile App',
       'IoT Device',
     ],
@@ -23,7 +23,7 @@ const projectsData = [
   {
     // LEFT CONTENT
     title: 'Project Title 2',
-    type: [
+    typeList: [
       'Website',
       'IoT Device',
     ],
@@ -40,7 +40,7 @@ const projectsData = [
   {
     // LEFT CONTENT
     title: 'Project Title 3',
-    type: [
+    typeList: [
       'IoT Device',
     ],
     technologies: 'Android Studio, Arudino IDE, Firebase',
