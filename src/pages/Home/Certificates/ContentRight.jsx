@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // MATERIAL UI CORES
 import Typography from '@mui/material/Typography'
@@ -51,6 +52,18 @@ const ContentRight = (props) => {
       </Typography>
     </div>
   )
+}
+
+ContentRight.defaultProps = {
+}
+
+ContentRight.propTypes = {
+  content: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    typeList: PropTypes.array.isRequired,
+    providers: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default ContentRight
