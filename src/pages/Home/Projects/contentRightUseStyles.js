@@ -35,6 +35,16 @@ const useStyles = makeStyles((theme) => ({
   rootMobile: {
     height: '100%',
     position: 'relative',
+    [theme.breakpoints.only('xs')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    [theme.breakpoints.only('sm')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
   },
   rootDesktopOrOther: {
     height: '100%',
@@ -42,17 +52,20 @@ const useStyles = makeStyles((theme) => ({
   },
   placeholderMobile: {
     // W:H = 9:16
+    left: 0,
     top: 0,
     position: 'absolute',
     [theme.breakpoints.only('xs')]: {
       // ONE IS 22
       width: 198,
       height: 352,
+      top: 'unset',
     },
     [theme.breakpoints.only('sm')]: {
       // ONE IS 24
       width: 216,
       height: 384,
+      top: 'unset',
     },
     [theme.breakpoints.only('md')]: {
       // ONE IS 28
@@ -70,9 +83,16 @@ const useStyles = makeStyles((theme) => ({
       height: 576,
     },
     '&:last-child': {
+      left: 'unset',
       right: 0,
       top: 'unset',
       bottom: 0,
+      [theme.breakpoints.only('xs')]: {
+        bottom: 'unset',
+      },
+      [theme.breakpoints.only('sm')]: {
+        bottom: 'unset',
+      },
     },
   },
   placeholderDesktopOrOther: {
