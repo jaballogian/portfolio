@@ -9,17 +9,19 @@ const ContentLeft = (props) => {
 
   const classes = useStyles()
 
-  let placeholderRoot, placeholder
-
   return (
     <div className={classes.contentLeftRoot}>
-      <div className={placeholderRoot}>
+      <div className={classes.placeholderRoot}>
         {content.imageList.map((item, index) => (
           <img 
             key={index}
             src={item} 
             alt='' 
-            className={placeholder}
+            className={
+              content.imageList.length === 1 ? 
+              `${classes.placeholder} ${classes.placeholderSingle}` :
+              `${classes.placeholder} ${classes.placeholderMultiple}`
+            }
           />
         ))}
       </div>
