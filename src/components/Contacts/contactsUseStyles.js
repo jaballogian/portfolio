@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   iconContainer: {
     marginBottom: 25,
     backgroundColor: colors.cultured,
+    boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.1)',
     '&:last-child': {
       marginBottom: 0,
     },
