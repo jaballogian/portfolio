@@ -24,21 +24,23 @@ const NotFound = () => {
 
   return (
     <div className={classes.notFoundRoot}>
-      {/* CAPTION */}
-      <Typography
-        variant='h4'
-        className={classes.caption}
-      >
-        404 Not Found
-      </Typography>
+      <div className={classes.captionAndTitleRoot}>
+        {/* CAPTION */}
+        <Typography
+          variant='h4'
+          className={classes.caption}
+        >
+          404 Not Found
+        </Typography>
 
-      {/* TITLE */}
-      <Typography
-        variant='h3'
-        className={classes.title}
-      >
-        Sorry, the page doesn't exist
-      </Typography>
+        {/* TITLE */}
+        <Typography
+          variant='h3'
+          className={classes.title}
+        >
+          Sorry, the page doesn't exist
+        </Typography>
+      </div>
 
       {/* IMAGE */}
       <img

@@ -14,17 +14,33 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     overflow: 'hidden',
   },
+  captionAndTitleRoot: {
+    position: 'fixed',
+    top: 50,
+  },
   caption: {
+    textAlign: 'center',
     color: colors.cadetBlueCrayola,
   },
   title: {
+    textAlign: 'center',
     color: 'black',
+    margin: '0px 25px',
   },
-  image: {},
+  image: {
+    width: '75%',
+    maxWidth: 750,
+    position: 'fixed',
+    top: '50%',
+    transform: 'translate(0px, -50%)',
+  },
   linkText: {
     textDecoration: 'none',
+    position: 'fixed',
+    bottom: 100,
   },
   button: {
+    marginTop: 30,
     backgroundColor: colors.paradisePink,
     textTransform: 'none',
     borderRadius: 10,
@@ -52,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('lg')]: {
       height: 85,
     },
-    [theme.breakpoints.up('xl')]: {
+    [theme.breakpoints.only('xl')]: {
       fontSize: 175,
     },
   },
