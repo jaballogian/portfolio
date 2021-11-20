@@ -67,6 +67,12 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     top: 0,
     position: 'absolute',
+    transform: 'scale(1)',
+    transition: 'transform 0.25s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.125)',
+      transition: 'transform 0.25s ease-in-out',
+    },
     [theme.breakpoints.only('xs')]: {
       // ONE IS 22
       width: 198,
@@ -112,6 +118,13 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     position: 'absolute',
     maxWidth: '100%',
+    position: 'absolute',
+    transform: 'scale(1)',
+    transition: 'transform 0.25s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.125)',
+      transition: 'transform 0.25s ease-in-out',
+    },
     [theme.breakpoints.only('xs')]: {
       // ONE IS 18
       width: 288,
