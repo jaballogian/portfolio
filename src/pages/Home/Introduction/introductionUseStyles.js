@@ -11,10 +11,19 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
     display: 'flex',
     position: 'relative',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.only('xs')]: {
       flexDirection: 'column',
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.only('sm')]: {
+      flexDirection: 'column',
+    },
+    [theme.breakpoints.only('md')]: {
+      minHeight: 700,
+    },
+    [theme.breakpoints.only('lg')]: {
+      minHeight: 700,
+    },
+    [theme.breakpoints.only('xl')]: {
       minHeight: 700,
     },
   },
@@ -40,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('lg')]: {
       paddingLeft: 75,
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.only('md')]: {
       minHeight: 700,
     },
   },
@@ -96,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('lg')]: {
       height: 85,
     },
-    [theme.breakpoints.up('xl')]: {
+    [theme.breakpoints.only('xl')]: {
       fontSize: 175,
     },
   },
