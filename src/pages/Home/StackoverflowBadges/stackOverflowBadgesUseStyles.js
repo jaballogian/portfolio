@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     marginBottom: 10,
+    filter: 'drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.1))',
     '&:last-child': {
       marginBottom: 0,
     },
