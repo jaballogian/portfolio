@@ -29,18 +29,10 @@ const useStyles = makeStyles((theme) => ({
   placeholderRoot: {
     height: '100%',
     position: 'relative',
-    [theme.breakpoints.only('xs')]: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    [theme.breakpoints.only('sm')]: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   placeholder: {
     // W:H = 16:9
@@ -68,12 +60,6 @@ const useStyles = makeStyles((theme) => ({
       // ONE IS 35
       width: 560,
     },
-  },
-  placeholderSingle: {
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    marginBottom: 'unset',
   },
   placeholderMultiple: {
     top: 0,

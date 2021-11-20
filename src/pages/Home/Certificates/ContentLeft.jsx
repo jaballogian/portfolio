@@ -19,7 +19,7 @@ const ContentLeft = (props) => {
             alt='' 
             className={
               content.imageList.length === 1 ? 
-              `${classes.placeholder} ${classes.placeholderSingle}` :
+              classes.placeholder :
               `${classes.placeholder} ${classes.placeholderMultiple}`
             }
           />
