@@ -11,6 +11,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    position: 'relative',
+    overflow: 'hidden',
   },
   caption: {
     color: colors.cadetBlueCrayola,
@@ -32,6 +34,27 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonText: {
     color: 'white',
+  },
+  backgroundText: {
+    height: 155,
+    textAlign: 'center',
+    [theme.breakpoints.only('xs')]: {
+      width: '100%',
+      height: 'unset',
+      bottom: -5,
+    },
+    [theme.breakpoints.only('sm')]: {
+      height: 67.5,
+    },
+    [theme.breakpoints.only('md')]: {
+      height: 75,
+    },
+    [theme.breakpoints.only('lg')]: {
+      height: 85,
+    },
+    [theme.breakpoints.up('xl')]: {
+      fontSize: 175,
+    },
   },
 }))
 

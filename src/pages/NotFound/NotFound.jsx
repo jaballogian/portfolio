@@ -1,5 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+
+// COMPONENTS
+import BackgroundText from 'components/BackgroundText/BackgroundText'
+
+// CONTEXTS
+import { AllPagesContext } from 'contexts/AllPagesContext'
 
 // IMAGES
 import IllustrationNotFound from 'assets/images/illustrations/not_found.svg'
@@ -12,6 +18,8 @@ import Typography from '@mui/material/Typography'
 import useStyles from './notFoundUseStyles'
 
 const NotFound = () => {
+  const { breakpointType } = useContext(AllPagesContext)
+
   const classes = useStyles()
 
   return (
@@ -56,6 +64,14 @@ const NotFound = () => {
           </Typography>
         </Button>
       </Link>
+
+      {/* BACKGROUND TEXT */}
+      <BackgroundText
+        text='PAGE NOT FOUND'
+        className={classes.backgroundText}
+        noWrap={breakpointType === 'xs' ? false : true}
+        textVariant='h1'
+      />
     </div>
   )
 }
