@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
@@ -30,8 +30,8 @@ const Header = (props) => {
     'CERTIFICATES',
   ]
 
-  const sectionClassName = (inputItem) => {
-    if(inputItem.toLowerCase() === location.toLowerCase()) {
+  const sectionClassName = (inputItem, inputIndex) => {
+    if((inputIndex === 0 && location === '') || (inputItem.toLowerCase() === location.toLowerCase())) {
       return `${classes.sectionText} ${classes.sectionActive} ${sectionTextClassName}`
     }
     else {
@@ -44,17 +44,13 @@ const Header = (props) => {
     sectionTextOnClick && sectionTextOnClick()
   }
 
-  useEffect(() => {
-    history.push('/#home')
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
-
   return (
     <div className={`${classes.headerRoot} ${rootClassName}`}>
       {sectionList.map((item, index) => (
         <Typography
           key={index}
           variant={sectionTextTypography ? sectionTextTypography : 'subtitle1'}
-          className={sectionClassName(item)}
+          className={sectionClassName(item, index)}
           onClick={() => onSectionTextIsClick(item)}
         >
           {item}
