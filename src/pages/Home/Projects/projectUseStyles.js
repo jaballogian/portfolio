@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('lg')]: {
       height: 85,
     },
-    [theme.breakpoints.up('xl')]: {
+    [theme.breakpoints.only('xl')]: {
       fontSize: 175,
     },
   },
