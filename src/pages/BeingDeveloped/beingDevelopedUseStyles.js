@@ -74,11 +74,11 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
   },
   button: {
-    backgroundColor: colors['paradisePink'],
+    backgroundColor: colors.paradisePink,
     textTransform: 'none',
     borderRadius: 10,
     '&:hover': {
-      backgroundColor: colors['redCrayola'],
+      backgroundColor: colors.redCrayola,
     },
     // [theme.breakpoints.down('xs')]: {
     //   height: 45,

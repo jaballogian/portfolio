@@ -26,7 +26,6 @@ const BeingDeveloped = () => {
 
       {/* IMAGE */}
       <img
-        component='img' 
         src={IllustrationBeingDeveloped} 
         alt='' 
         className={classes.image}
