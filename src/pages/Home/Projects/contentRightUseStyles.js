@@ -117,7 +117,6 @@ const useStyles = makeStyles((theme) => ({
   placeholderDesktopOrOther: {
     // W:H = 16:9
     top: 0,
-    position: 'absolute',
     maxWidth: '100%',
     position: 'absolute',
     filter: 'drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25))',
