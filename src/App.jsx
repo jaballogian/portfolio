@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 // COMPONENTS
 import Toast from 'components/Toast/Toast'
@@ -10,6 +10,7 @@ import { AllPagesContext } from 'contexts/AllPagesContext'
 // PAGES
 import Home from './pages/Home/Home'
 import BeingDeveloped from './pages/BeingDeveloped/BeingDeveloped'
+import NotFound from './pages/NotFound/NotFound'
 
 function App() {
   const { 
@@ -29,6 +30,12 @@ function App() {
       path: '/project/:projectId',
       exact: true,
       component: <BeingDeveloped/>,
+    },
+    // NOT FOUND
+    {
+      path: '/404',
+      exact: true,
+      component: <NotFound/>,
     },
   ]
 
@@ -56,6 +63,7 @@ function App() {
               {item.component}
             </Route>
           ))}
+          <Redirect to='/404'/>
         </Switch>
       </Router>
 
