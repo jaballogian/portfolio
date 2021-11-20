@@ -67,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     top: 0,
     position: 'absolute',
+    filter: 'drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25))',
     transform: 'scale(1)',
     transition: 'transform 0.25s ease-in-out',
     '&:hover': {
@@ -119,6 +120,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     maxWidth: '100%',
     position: 'absolute',
+    filter: 'drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25))',
     transform: 'scale(1)',
     transition: 'transform 0.25s ease-in-out',
     '&:hover': {
