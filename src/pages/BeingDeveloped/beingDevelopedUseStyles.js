@@ -1,7 +1,10 @@
 // CONSTANTS
 import colors from 'constants/colors'
 
-const styles = {
+// MATERIAL UI STYLES
+import { makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '100%',
@@ -93,6 +96,6 @@ const styles = {
   buttonText: {
     color: 'white',
   },
-}
+}))
 
-export default styles
+export default useStyles
