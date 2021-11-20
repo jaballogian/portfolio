@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   captionAndTitleRoot: {
     position: 'fixed',
     top: 50,
+    zIndex: 1,
   },
   caption: {
     textAlign: 'center',
@@ -33,6 +34,21 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     top: '50%',
     transform: 'translate(0px, -50%)',
+    [theme.breakpoints.only('xs')]: {
+      maxWidth: 550,
+    },
+    [theme.breakpoints.only('sm')]: {
+      maxWidth: 600,
+    },
+    [theme.breakpoints.only('md')]: {
+      maxWidth: 650,
+    },
+    [theme.breakpoints.only('lg')]: {
+      maxWidth: 600,
+    },
+    [theme.breakpoints.only('xl')]: {
+      maxWidth: 750,
+    },
   },
   linkText: {
     textDecoration: 'none',
