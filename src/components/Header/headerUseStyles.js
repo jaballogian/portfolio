@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     position: 'fixed',
     width: 'fit-content',
-    zIndex: 1,
+    zIndex: 10,
     top: 67,
     left: '50%',
     transform: 'translateX(-50%)',
