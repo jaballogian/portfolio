@@ -6,11 +6,11 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     right: 20,
     top: 20,
-    zIndex: 1,
+    zIndex: 10,
   },
   navigationContainer: {
     position: 'fixed',
-    zIndex: 2,
+    zIndex: 10,
     backgroundColor: 'white',
     height: '100vh',
     width: '100vw',
