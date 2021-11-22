@@ -1,28 +1,46 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+
+// COMPONENTS
+import BackgroundText from 'components/BackgroundText/BackgroundText'
+
+// CONTEXTS
+import { AllPagesContext } from 'contexts/AllPagesContext'
+
+// IMAGES
+import IllustrationBeingDeveloped from 'assets/images/illustrations/being_developed.svg'
 
 // MATERIAL UI CORES
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
-// IMAGES
-import IllustrationBeingDeveloped from 'assets/images/illustrations/being_developed.svg'
-
 // STYLES
 import useStyles from './beingDevelopedUseStyles'
 
 const BeingDeveloped = () => {
+  const { breakpointType } = useContext(AllPagesContext)
+
   const classes = useStyles()
   
   return (
-    <div className={classes.root}>
-      {/* TITLE */}
-      <Typography
-        variant='h2'
-        className={classes.title}
-      >
-        Sorry, I’m still working on this section
-      </Typography>
+    <div className={classes.beingDevelopedRoot}>
+      <div className={classes.captionAndTitleRoot}>
+        {/* TITLE */}
+        <Typography
+          variant='h2'
+          className={classes.title}
+        >
+          Sorry, I’m still working on this section
+        </Typography>
+        
+        {/* CAPTION */}
+        <Typography
+          variant='h4'
+          className={classes.caption}
+        >
+          Please come back later
+        </Typography>
+      </div>
 
       {/* IMAGE */}
       <img
@@ -48,6 +66,14 @@ const BeingDeveloped = () => {
           </Typography>
         </Button>
       </Link>
+
+      {/* BACKGROUND TEXT */}
+      <BackgroundText
+        text='BEING DEVELOPED'
+        className={classes.backgroundText}
+        noWrap={breakpointType === 'xs' ? false : true}
+        textVariant='h1'
+      />
     </div>
   )
 }
