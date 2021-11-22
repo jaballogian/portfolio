@@ -27,7 +27,7 @@ function App() {
     },
     // PROJECT DETAIL PAGE
     {
-      path: '/project/:projectId',
+      path: '/being-developed',
       exact: true,
       component: <BeingDeveloped/>,
     },
